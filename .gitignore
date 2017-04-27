@@ -8,18 +8,16 @@
 ehthumbs.db
 Thumbs.db
 
-# Sass #
+# Sass & JS #
 ######################
 **/.sass-cache/
 *.css.*
+*.map
 
-# Yeoman generated #
+# Node #
 ######################
 node_modules
-_deps
 npm-debug.log
-.DS_Store
-*.map
 
 # Grow #
 ######################
@@ -30,3 +28,4 @@ dist/
 # Other #
 ######################
 *.sketch
+_deps
