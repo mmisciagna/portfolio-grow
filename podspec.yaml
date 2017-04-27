@@ -1,0 +1,18 @@
+grow_version: ">=0.0.68"
+
+home: /content/pages/home.yaml
+
+static_dirs:
+- static_dir: /dist/
+  serve_at: /{root}/
+
+preprocessors:
+- kind: gulp
+  build_task: "build"
+
+deployments:
+  webreview:
+    destination: webreview
+    server: googwebreview.appspot.com
+    project: mmisciagna/portfolio
+    subdomain_prefix: michael

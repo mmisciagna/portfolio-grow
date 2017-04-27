@@ -1,0 +1,31 @@
+# OS generated files #
+######################
+**.DS_Store
+**.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Sass #
+######################
+**/.sass-cache/
+*.css.*
+
+# Yeoman generated #
+######################
+node_modules
+_deps
+npm-debug.log
+.DS_Store
+*.map
+
+# Grow #
+######################
+build/
+.podcache.yaml
+
+# Other #
+######################
+*.sketch

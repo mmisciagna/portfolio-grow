@@ -1,0 +1,2 @@
+$path: /{root}/{slug}
+$view: /views/base.html
