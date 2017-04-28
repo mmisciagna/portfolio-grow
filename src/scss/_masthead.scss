@@ -1,4 +1,5 @@
 .masthead-offset {
+  background: $color-black;
   height: $masthead-height;
 }
 
@@ -6,21 +7,26 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: $masthead-height;
   width: 100%;
   background: $color-black;
-  padding: 0 $buffer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &--reversed {
     background: $color-white;
     border-bottom: 1px solid $color-black-80;
   }
 
-  @include tablet-up {
-    padding-right: 0;
+  &__max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $masthead-height;
+    margin: 0 auto;
+    max-width: $max-width;
+    padding: 0 $buffer;
+
+    @include tablet-up {
+      padding-right: 0;
+    }
   }
 
   &__title {
