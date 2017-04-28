@@ -7,14 +7,16 @@
     </div>
   </div>
   <div class="block">
-    <div class="block__nav" role="tablist">
-      {% for page in g.docs('pages') if not page.order == 1 %}
-        <a class="block__nav-item"
-            role="tab"
-            href="{{page.url.path}}">
-          {{page.title}}
-        </a>
-      {% endfor %}
+    <div class="block__content">
+      <div class="block__nav" role="tablist">
+        {% for page in g.docs('pages') if not page.order == 1 %}
+          <a class="block__nav-item"
+              role="tab"
+              href="{{page.url.path}}">
+            {{page.title}}
+          </a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 {% endblock %}

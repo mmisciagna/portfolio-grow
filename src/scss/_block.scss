@@ -2,10 +2,17 @@
   max-width: $max-width;
   margin: $twice-buffer auto;
 
+  &__content {
+    padding: 0 $buffer;
+  }
+
   &__nav {
     max-width: $hero-content-width;
     margin: 0 auto;
-    padding: 0 $buffer;
+
+    @include tablet-up {
+      padding: 0 $buffer;
+    }
   }
 
   &__nav-item {
