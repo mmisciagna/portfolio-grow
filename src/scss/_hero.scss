@@ -15,7 +15,7 @@
   }
 
   &__content {
-    max-width: $hero-content-width;
+    max-width: $max-width;
     margin: 0 auto;
     font-size: $font-size-lg;
     font-weight: $font-weight-bold;
@@ -26,6 +26,15 @@
       line-height: $font-line-height-sm;
       padding: $twice-buffer $buffer;
       font-size: $font-size-x-lg;
+    }
+  }
+
+  &__copy {
+    max-width: $hero-content-width;
+    margin: 0 auto;
+
+    @include tablet-up {
+      padding: 0 $buffer;
     }
   }
 }
