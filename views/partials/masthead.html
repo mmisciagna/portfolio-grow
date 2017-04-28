@@ -1,0 +1,19 @@
+<div class="masthead-offset"></div>
+<header class="masthead">
+  <h1 class="masthead__title">
+    <a class="masthead__title-link" href="/">{{podspec.title}}</a>
+  </h1>
+  <button class="masthead__menu-btn js-reveal-mobile-nav">
+    <svg class="masthead__menu-icon" viewBox="0 0 30 30" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8"><g transform="translate(-270.000000, -15.000000)"><g><g transform="translate(270.000000, 15.000000)"><rect stroke="#FFFFFF" x="0.5" y="0.5" width="29" height="29" rx="3"/><g transform="translate(5.000000, 9.000000)" fill="#FFFFFF"><rect x="0" y="0" width="20" height="2"/><rect x="0" y="4" width="20" height="5"/><rect x="0" y="12" width="20" height="1"/></g></g></g></g></g></svg>
+  </button>
+  <nav class="masthead__nav" role="tablist">
+    {% for page in g.docs('pages') %}
+      <a class="masthead__nav-item{% if doc == page %} masthead__nav-item--is-active{% endif %}"
+          role="tab"
+          aria-selected="{% if doc == page %}true{% else %}false{% endif %}"
+          href="{{page.url.path}}">
+        {{page.title}}
+      </a>
+    {% endfor %}
+  </nav>
+</header>

@@ -1,4 +1,7 @@
-body,
-html {
-  background-color: red;
-}
+// Global.
+@import 'config';
+@import 'global';
+
+// Components.
+@import 'masthead';
+@import 'mobile-nav';

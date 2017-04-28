@@ -1,14 +1,15 @@
 grow_version: ">=0.0.68"
 
+title: "Michael M."
 home: /content/pages/home.yaml
 
 static_dirs:
-- static_dir: /dist/
-  serve_at: /{root}/
+  - static_dir: /dist/
+    serve_at: /dist/
 
 preprocessors:
-- kind: gulp
-  build_task: "build"
+  - kind: gulp
+    build_task: "build"
 
 deployments:
   webreview:

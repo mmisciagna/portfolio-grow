@@ -1,0 +1,93 @@
+.masthead-offset {
+  height: $masthead-height;
+}
+
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $masthead-height;
+  width: 100%;
+  background: $color-black;
+  padding: 0 $buffer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--reversed {
+    background: $color-white;
+    border-bottom: 1px solid $color-black-80;
+  }
+
+  @include tablet-up {
+    padding-right: 0;
+  }
+
+  &__title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-light;
+    line-height: 1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__title-link {
+    color: $color-white;
+    text-decoration: none;
+
+    &--reversed {
+      color: $color-black-80;
+    }
+  }
+
+  &__menu-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    line-height: 1;
+
+    @include tablet-up {
+      display: none;
+    }
+  }
+
+  &__menu-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__nav {
+    display: none;
+
+    @include tablet-up {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav-item {
+    display: inline-block;
+    line-height: $masthead-height;
+    margin-left: $half-buffer;
+    padding: 0 $half-buffer;
+    text-decoration: none;
+    color: $color-white-80;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color $ease-out;
+
+    &--is-active {
+      background: $color-white-15;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

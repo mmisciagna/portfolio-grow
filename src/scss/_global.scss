@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-bg;
+  color: $font-color;
+  font: $font;
+  margin: 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

@@ -2,13 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Michael M.</title>
+    <title>{{podspec.title}}</title>
     <meta content="Michael Misciagna" name="author">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!-- <link rel="shortcut icon" href=""> -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
     <link href="{{g.static('/dist/css/main.min.css').url.path}}" rel="stylesheet">
   </head>
   <body>
+    {% include "/views/partials/masthead.html" %}
+    {% include "/views/partials/mobile-nav.html" %}
     <main class="main-content">
       {% block page_content %}{% endblock %}
     </main>

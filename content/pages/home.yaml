@@ -1,4 +1,4 @@
-$path: /
+$path: /{root}/
 $view: /views/index.html
 $title: "Hello"
 $order: 1
