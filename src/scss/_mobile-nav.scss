@@ -42,12 +42,12 @@
     text-decoration: none;
     color: $color-black-80;
     font-weight: $font-weight-light;
-    font-size: $font-size-lg;
+    font-size: $font-size-x-lg;
     line-height: $font-line-height-lg;
     text-transform: uppercase;
     opacity: 0;
     transform: translateY($buffer);
-    transition: all $ease-out;
+    transition: opacity $ease-out, transform $ease-out;
 
     &--is-active {
       border-bottom: 1px solid;

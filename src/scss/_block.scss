@@ -1,0 +1,25 @@
+.block {
+  max-width: $max-width;
+  margin: $twice-buffer auto;
+
+  &__nav {
+    max-width: $hero-content-width;
+    margin: 0 auto;
+    padding: 0 $buffer;
+  }
+
+  &__nav-item {
+    display: block;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    line-height: $font-line-height-x-lg;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    color: $color-black-80;
+    transition: padding-left $ease-out;
+
+    &:hover {
+      padding-left: $half-buffer;
+    }
+  }
+}

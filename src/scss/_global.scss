@@ -18,8 +18,12 @@ body {
   box-sizing: inherit;
 }
 
-.main-content {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: $buffer;
+::-moz-selection {
+  color: $color-white-80;
+  background: $color-black-80;
+}
+
+::selection {
+  color: $color-white-80;
+  background: $color-black-80;
 }

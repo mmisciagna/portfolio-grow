@@ -1,3 +1,4 @@
 const MobileNav = require('./mobile-nav');
 
-new MobileNav();
+
+MobileNav.init();

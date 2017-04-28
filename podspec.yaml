@@ -5,7 +5,9 @@ home: /content/pages/home.yaml
 
 static_dirs:
   - static_dir: /dist/
-    serve_at: /dist/
+    serve_at: /
+  - static_dir: /src/img/
+    serve_at: /img/
 
 preprocessors:
   - kind: gulp

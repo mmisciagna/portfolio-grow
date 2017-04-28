@@ -1,8 +1,10 @@
 // Buffers.
 $buffer: 20px;
+$twice-buffer: $buffer * 2;
 $half-buffer: $buffer / 2;
 $masthead-height: 60px;
-$max-width: 900px;
+$max-width: 940px;
+$hero-content-width: 600px;
 
 // Transitions.
 $ease-out: .3s ease-out;
@@ -21,17 +23,21 @@ $color-black: #000;
 //Font.
 $font-color: $color-black-70;
 
-$font-size-lg: 32px;
+$font-size-x-lg: 32px;
+$font-size-lg: 24px;
 $font-size-md: 18px;
 $font-size-sm: 14px;
+$font-size-x-sm: 12px;
 
 $font-weight-bold: 600;
 $font-weight-reg: 400;
 $font-weight-light: 300;
 
+$font-line-height-x-lg: 2.7em;
 $font-line-height-lg: 2em;
-$font-line-height-reg: 1.7em;
-$font-line-height-sm: 1.25em;
+$font-line-height-md: 1.7em;
+$font-line-height-sm: 1.5em;
+$font-line-height-x-sm: 1.25em;
 
 $font: 400 14px/1.7em 'Source Sans Pro', Arial, sans-serif;
 

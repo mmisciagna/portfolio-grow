@@ -2,3 +2,7 @@ $path: /{root}/
 $view: /views/index.html
 $title: "Hello"
 $order: 1
+
+hero:
+  text: "Hello, my name is Michael Misciagna, pronounced me-shah-nyuh. I'm a <a href=\"https://www.youtube.com\">Creative Engineer</a>, a role where content and display meet."
+  bg: "low-contrast-linen.jpg"

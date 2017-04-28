@@ -15,7 +15,7 @@
     border-bottom: 1px solid $color-black-80;
   }
 
-  &__max-width {
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,11 +68,11 @@
 
   &__nav {
     display: none;
+    align-items: center;
+    justify-content: flex-end;
 
     @include tablet-up {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
     }
   }
 
@@ -80,16 +80,18 @@
     display: inline-block;
     line-height: $masthead-height;
     margin-left: $half-buffer;
-    padding: 0 $half-buffer;
+    padding: 0 $buffer;
     text-decoration: none;
     color: $color-white-80;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color $ease-out;
+    font-size: $font-size-x-sm;
 
     &--is-active {
       background: $color-white-15;
+      color: $color-white;
     }
 
     &:hover {
