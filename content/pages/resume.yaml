@@ -1,3 +1,7 @@
 $view: /views/index.html
 $title: "Résumé"
 $order: 3
+
+hero:
+  text: "..."
+  bg: "blueprint.jpg"
