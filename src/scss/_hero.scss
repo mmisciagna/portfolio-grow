@@ -21,11 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 100%);
-
-    @include tablet-up {
-      min-height: 272px;
-    }
+    background: linear-gradient(to top, $color-black-80 0%, transparent 100%);
   }
 
   &__copy {
