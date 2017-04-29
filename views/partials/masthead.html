@@ -9,7 +9,7 @@
     </button>
     <nav class="masthead__nav" role="tablist">
       {% for page in g.docs('pages') %}
-        <a class="masthead__nav-item{% if doc == page %} masthead__nav-item--is-active{% endif %}"
+        <a class="masthead__nav-item{% if doc == page %} masthead__nav-item--is-active{% endif %} js-mobile-nav-item"
             role="tab"
             aria-selected="{% if doc == page %}true{% else %}false{% endif %}"
             href="{{page.url.path}}">

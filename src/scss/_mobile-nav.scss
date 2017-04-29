@@ -15,14 +15,6 @@
   &--is-visible {
     visibility: visible;
     opacity: 1;
-
-    @each $child in 1, 2, 3, 4 {
-      .mobile-nav__item:nth-child(#{$child}) {
-        transition-delay: calc(#{$child}s / 8);
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
   }
 
   @include tablet-up {
@@ -40,7 +32,7 @@
   &__item {
     display: inline-block;
     text-decoration: none;
-    color: $color-black-80;
+    color: $color-black-50;
     font-weight: $font-weight-light;
     font-size: $font-size-x-lg;
     line-height: $font-line-height-lg;
@@ -51,6 +43,12 @@
 
     &--is-active {
       border-bottom: 1px solid;
+      color: $color-black-80;
+    }
+
+    &--animate-in {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }

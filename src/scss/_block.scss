@@ -1,6 +1,10 @@
 .block {
   max-width: $max-width;
-  margin: $buffer auto;
+  margin: $half-buffer auto;
+
+  @include tablet-up {
+    margin: $buffer auto;
+  }
 
   &__nav {
     padding: 0 $buffer;

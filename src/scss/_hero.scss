@@ -2,6 +2,7 @@
   color: $color-white;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 
   a {
     color: inherit;
@@ -44,7 +45,6 @@
     margin: $half-buffer 0;
     font-size: $font-size-x-x-lg;
     line-height: 1;
-    display: inline-block;
     text-indent: -5px;
   }
 
