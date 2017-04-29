@@ -19,11 +19,16 @@ body {
 }
 
 ::-moz-selection {
-  color: $color-white-80;
-  background: $color-black-80;
+  color: $color-black-80;
+  background: $color-yellow-80;
 }
 
 ::selection {
-  color: $color-white-80;
-  background: $color-black-80;
+  color: $color-black-80;
+  background: $color-yellow-80;
+}
+
+.main-content {
+  max-width: $breakpoint-lg-desktop;
+  margin: 0 auto;
 }

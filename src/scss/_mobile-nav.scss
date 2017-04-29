@@ -46,7 +46,7 @@
     line-height: $font-line-height-lg;
     text-transform: uppercase;
     opacity: 0;
-    transform: translateY($buffer);
+    transform: translateY($half-buffer);
     transition: opacity $ease-out, transform $ease-out;
 
     &--is-active {

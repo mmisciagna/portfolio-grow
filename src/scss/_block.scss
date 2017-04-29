@@ -1,18 +1,9 @@
 .block {
   max-width: $max-width;
-  margin: $twice-buffer auto;
-
-  &__content {
-    padding: 0 $buffer;
-  }
+  margin: $buffer auto;
 
   &__nav {
-    max-width: $hero-content-width;
-    margin: 0 auto;
-
-    @include tablet-up {
-      padding: 0 $buffer;
-    }
+    padding: 0 $buffer;
   }
 
   &__nav-item {
@@ -26,7 +17,7 @@
     transition: padding-left $ease-out;
 
     &:hover {
-      padding-left: $half-buffer;
+      padding-left: $quarter-buffer;
     }
   }
 }

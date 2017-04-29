@@ -1,6 +1,7 @@
 .hero {
-  background: url(/img/low-contrast-linen.jpg) repeat;
   color: $color-white;
+  background-position: center;
+  background-size: cover;
 
   a {
     color: inherit;
@@ -15,26 +16,39 @@
   }
 
   &__content {
-    max-width: $max-width;
-    margin: 0 auto;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-bold;
-    line-height: $font-line-height-lg;
-    padding: $buffer;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 100%);
 
     @include tablet-up {
-      line-height: $font-line-height-sm;
-      padding: $twice-buffer $buffer;
-      font-size: $font-size-x-lg;
+      min-height: 272px;
     }
   }
 
   &__copy {
-    max-width: $hero-content-width;
+    padding: $buffer;
     margin: 0 auto;
+    max-width: $max-width;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    line-height: $font-line-height-sm;
 
     @include tablet-up {
-      padding: 0 $buffer;
+      font-size: $font-size-lg;
     }
+  }
+
+  &__title {
+    margin: $half-buffer 0;
+    font-size: $font-size-x-x-lg;
+    line-height: 1;
+    display: inline-block;
+    text-indent: -5px;
+  }
+
+  &__paragraph {
+    margin: 0;
   }
 }

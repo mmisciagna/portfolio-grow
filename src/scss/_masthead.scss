@@ -23,10 +23,6 @@
     margin: 0 auto;
     max-width: $max-width;
     padding: 0 $buffer;
-
-    @include tablet-up {
-      padding-right: 0;
-    }
   }
 
   &__title {
@@ -64,6 +60,11 @@
   &__menu-icon {
     width: 30px;
     height: 30px;
+    fill: $color-white-80;
+
+    &--reversed {
+      fill: $color-black-80;
+    }
   }
 
   &__nav {
@@ -79,10 +80,9 @@
   &__nav-item {
     display: inline-block;
     line-height: $masthead-height;
-    margin-left: $half-buffer;
-    padding: 0 $buffer;
+    margin-left: $buffer;
     text-decoration: none;
-    color: $color-white-80;
+    color: $color-white-50;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -90,7 +90,6 @@
     font-size: $font-size-x-sm;
 
     &--is-active {
-      background: $color-white-15;
       color: $color-white;
     }
 
