@@ -1,0 +1,18 @@
+.block {
+  margin: $buffer 0;
+  width: 100%;
+
+  &--top {
+    margin-top: 0;
+  }
+
+  &--bottom {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $buffer;
+  }
+}

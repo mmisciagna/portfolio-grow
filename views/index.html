@@ -1,15 +1,28 @@
 {% extends "/views/base.html" %}
 
 {% block page_content %}
-  <div class="block">
-    <div class="block__nav" role="tablist">
-      {% for page in g.docs('pages') if not page == doc %}
-        <a class="block__nav-item"
-            role="tab"
-            href="{{page.url.path}}">
-          {{page.title}}
-        </a>
-      {% endfor %}
+  <div class="home flex flex--column flex--center">
+    <div class="block block--top">
+      <div class="block__content">
+        <h2 class="home__title"
+            {% if doc.title_indent %}
+              style="text-indent: {{doc.title_indent}};"
+            {% endif %}>
+          {{doc.title}}
+        </h2>
+        <p class="home__paragraph">{{doc.paragraph}}</p>
+      </div>
+    </div>
+    <div class="block block--bottom">
+      <div class="home__nav" role="tablist">
+        {% for page in g.docs('pages') if not page == doc %}
+          <a class="home__nav-item"
+              role="tab"
+              href="{{page.url.path}}">
+            {{page.title}}
+          </a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 {% endblock %}

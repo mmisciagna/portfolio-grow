@@ -1,0 +1,35 @@
+.hero {
+  background: $color-white-60;
+
+  &__content {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $buffer;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: $buffer;
+      bottom: -30px;
+      border: 0;
+      border-top: 30px solid $color-white-60;
+    	border-right: 30px solid transparent;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-xx-lg;
+    line-height: $line-height-reset;
+    color: $color-black-15;
+    font-weight: $font-weight-x-light;
+    margin: 0;
+  }
+
+  &__paragraph {
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+    max-width: $hero-copy-max-width;
+    margin-bottom: 0;
+  }
+}

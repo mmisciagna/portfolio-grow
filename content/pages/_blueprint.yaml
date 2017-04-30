@@ -1,1 +1,2 @@
 $path: /{root}/{base}/
+$view: /views/base.html

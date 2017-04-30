@@ -10,6 +10,7 @@ const Selectors = {
 
 const ClassNames = {
   ANIMATE_ITEM: 'mobile-nav__item--animate-in',
+  NO_SCROLL: 'no-scroll',
   REVEAL: 'mobile-nav--is-visible'
 };
 
@@ -30,6 +31,7 @@ class MobileNav {
   reveal() {
     this.root.classList.add(ClassNames.REVEAL);
     this.root.setAttribute(ARIA_ATTRIBUTE, false);
+    document.body.classList.add(ClassNames.NO_SCROLL);
     let index = 0;
 
     const interval = setInterval(() => {
@@ -41,6 +43,7 @@ class MobileNav {
   close() {
     this.root.classList.remove(ClassNames.REVEAL);
     this.root.setAttribute(ARIA_ATTRIBUTE, true);
+    document.body.classList.remove(ClassNames.NO_SCROLL);
 
     this.items.forEach((item) => {
       item.classList.remove(ClassNames.ANIMATE_ITEM);

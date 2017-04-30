@@ -1,0 +1,50 @@
+.home {
+  height: 100%;
+
+  &__title {
+    font-size: $font-size-xx-lg;
+    font-weight: $font-weight-x-light;
+    color: $color-black-15;
+    margin: 0 0 $quarter-buffer;
+    line-height: $line-height-reset;
+
+    @include tablet-up {
+      font-size: $font-size-xxx-lg;
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+    max-width: $hero-copy-max-width;
+
+    @include tablet-up {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__nav {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $buffer;
+  }
+
+  &__nav-item {
+    display: block;
+    font-size: $font-size-md;
+    line-height: $line-height-lg;
+    color: $color-black-80;
+    border-bottom: 1px solid $color-black-15;
+    text-decoration: none;
+    transition: padding-left $ease-out;
+
+    &:hover {
+      padding-left: $quarter-buffer;
+    }
+
+    @include tablet-up {
+      font-size: $font-size-lg;
+    }
+  }
+}

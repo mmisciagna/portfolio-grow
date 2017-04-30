@@ -2,3 +2,6 @@ $path: /{root}/
 $view: /views/index.html
 $title: "Hello"
 $order: 1
+
+title_indent: "-6px" 
+paragraph: "My name is Michael Misciagna, (mē-shah-nyuh). I'm a YouTube Creative Engineer and all’round nice guy — a role where content and display meet."

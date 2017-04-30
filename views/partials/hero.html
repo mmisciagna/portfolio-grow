@@ -6,9 +6,12 @@
       "
     {% endif %}>
   <div class="hero__content">
-    <div class="hero__copy">
-      <h2 class="hero__title">{{doc.title}}</h2>
-      <p class="hero__paragraph">{{doc.hero.text}}</p>
-    </div>
+    <h2 class="hero__title"
+        {% if doc.hero.title_indent %}
+          style="text-indent: {{doc.hero.title_indent}};"
+        {% endif %}>
+      {{doc.title}}
+    </h2>
+    <p class="hero__paragraph">{{doc.hero.paragraph}}</p>
   </div>
 </div>

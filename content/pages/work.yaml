@@ -1,0 +1,7 @@
+$view: /views/work.html
+$title: "Work"
+$order: 2
+
+hero:
+  title_indent: "-11px"
+  paragraph: "YT Creative Engineers are in charge of developing and maintaing YT marketing sites. I'm also available as a prototyper for 20% projects."

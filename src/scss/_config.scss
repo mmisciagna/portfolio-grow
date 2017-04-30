@@ -3,11 +3,15 @@ $buffer: 40px;
 $half-buffer: $buffer / 2;
 $quarter-buffer: $buffer / 4;
 
-$max-width: 940px;
+$max-width: 980px;
+$hero-copy-max-width: 650px;
 $masthead-height: 60px;
 
 $icon-lg: 30px;
 $icon-sm: 15px;
+
+$z-top: 1000;
+$z-md: 100;
 
 // Transitions.
 $ease-out: .3s ease-out;
@@ -16,6 +20,7 @@ $ease-out: .3s ease-out;
 $color-black-80: rgba(0,0,0,.8);
 $color-black-60: rgba(0,0,0,.6);
 $color-black-25: rgba(0,0,0,.25);
+$color-black-15: rgba(0,0,0,.15);
 
 $color-white: #fff;
 $color-white-80: rgba(255,255,255,.8);
@@ -50,7 +55,6 @@ $font: 400 14px/2em 'Source Sans Pro', Arial, sans-serif;
 $breakpoint-tablet: 600px;
 $breakpoint-sm-desktop: 900px;
 $breakpoint-desktop: 1200px;
-$breakpoint-lg-desktop: 1441px;
 
 @mixin tablet-up {
   @media only screen and (min-width: $breakpoint-tablet) {
@@ -66,18 +70,6 @@ $breakpoint-lg-desktop: 1441px;
 
 @mixin desktop-up {
   @media only screen and (min-width: $breakpoint-desktop) {
-    @content;
-  }
-}
-
-@mixin lg-desktop-up {
-  @media only screen and (min-width: $breakpoint-desktop + 1) {
-    @content;
-  }
-}
-
-@mixin xl-desktop-up {
-  @media only screen and (min-width: $breakpoint-lg-desktop) {
     @content;
   }
 }

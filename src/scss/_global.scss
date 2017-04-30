@@ -3,13 +3,27 @@ html {
 }
 
 body {
-  background: $color-white;
   color: $font-color;
   font: $font;
   margin: 0;
   width: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+body,
+html {
+  background-color: $color-white;
+  background-image: url(/img/wood-pattern.png);
+  background-blend-mode: luminosity;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -26,4 +40,12 @@ body {
 ::selection {
   color: $color-white-80;
   background: $color-black-80;
+}
+
+p {
+  margin: $half-buffer 0;
+}
+
+.main-content {
+  flex: 1;
 }

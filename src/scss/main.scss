@@ -1,7 +1,11 @@
 // Global.
 @import 'config';
 @import 'global';
+@import 'flex';
 @import 'block';
+
+// Pages.
+@import 'home';
 
 // Components.
 @import 'masthead';
