@@ -32,10 +32,10 @@
   &__item {
     display: inline-block;
     text-decoration: none;
-    color: $color-black-50;
+    color: $color-black-60;
     font-weight: $font-weight-light;
     font-size: $font-size-x-lg;
-    line-height: $font-line-height-lg;
+    line-height: $line-height-md;
     text-transform: uppercase;
     opacity: 0;
     transform: translateY($half-buffer);

@@ -6,14 +6,16 @@
     <meta content="Michael Misciagna" name="author">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="{{g.static('/src/img/favicon.png').url.path}}" rel="shortcut icon">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">
     <link href="{{g.static('/dist/css/main.min.css').url.path}}" rel="stylesheet">
   </head>
   <body>
     {% include "/views/partials/masthead.html" %}
     {% include "/views/partials/mobile-nav.html" %}
     <main class="main-content">
-      {% include "/views/partials/hero.html" %}
+      {% if doc.hero %}
+        {% include "/views/partials/hero.html" %}
+      {% endif %}
       {% block page_content %}{% endblock %}
     </main>
     <script src="{{g.static('/dist/js/main.min.js').url.path}}"></script>

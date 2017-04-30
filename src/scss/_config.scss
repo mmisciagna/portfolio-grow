@@ -1,50 +1,50 @@
 // Buffers.
 $buffer: 40px;
-$twice-buffer: $buffer * 2;
 $half-buffer: $buffer / 2;
 $quarter-buffer: $buffer / 4;
 
 $max-width: 940px;
 $masthead-height: 60px;
 
+$icon-lg: 30px;
+$icon-sm: 15px;
+
 // Transitions.
 $ease-out: .3s ease-out;
 
 // Colors.
 $color-black-80: rgba(0,0,0,.8);
-$color-black-50: rgba(0,0,0,.5);
+$color-black-60: rgba(0,0,0,.6);
+$color-black-25: rgba(0,0,0,.25);
 
-$color-white-80: rgba(255,255,255,.8);
-$color-white-50: rgba(255,255,255,.5);
-
-$color-yellow-80: rgba(250,255,0,.8);
-$color-teal: #50e3c2;
-$color-teal-80: rgba(80,227,194,.8);
-
-$color-bg: #f1f1f1;
 $color-white: #fff;
-$color-black: #000;
+$color-white-80: rgba(255,255,255,.8);
+$color-white-60: rgba(255,255,255,.6);
+
 
 //Font.
-$font-color: $color-black-80;
+$font-color: $color-black-60;
 
-$font-size-x-x-lg: 64px;
+$font-size-xxx-lg: 92px;
+$font-size-xx-lg: 64px;
 $font-size-x-lg: 32px;
-$font-size-lg: 24px;
+$font-size-lg: 28px;
 $font-size-md: 18px;
 $font-size-sm: 14px;
 $font-size-x-sm: 12px;
 
-$font-weight-bold: 600;
 $font-weight-reg: 400;
 $font-weight-light: 300;
+$font-weight-x-light: 200;
 
-$font-line-height-x-lg: 2.7em;
-$font-line-height-lg: 2em;
-$font-line-height-md: 1.7em;
-$font-line-height-sm: 1.5em;
+$line-height-x-lg: 2.7em;
+$line-height-lg: 2.5em;
+$line-height-md: 2em;
+$line-height-sm: 1.5em;
+$line-height-x-sm: 1.125em;
+$line-height-reset: 1;
 
-$font: 400 14px/1.7em 'Source Sans Pro', Arial, sans-serif;
+$font: 400 14px/2em 'Source Sans Pro', Arial, sans-serif;
 
 // Breakpoints and media queries.
 $breakpoint-tablet: 600px;

@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: $color-bg;
+  background: $color-white;
   color: $font-color;
   font: $font;
   margin: 0;
@@ -19,16 +19,11 @@ body {
 }
 
 ::-moz-selection {
-  color: $color-black-80;
-  background: $color-teal-80;
+  color: $color-white-80;
+  background: $color-black-80;
 }
 
 ::selection {
-  color: $color-black-80;
-  background: $color-teal-80;
-}
-
-.main-content {
-  max-width: $breakpoint-lg-desktop;
-  margin: 0 auto;
+  color: $color-white-80;
+  background: $color-black-80;
 }

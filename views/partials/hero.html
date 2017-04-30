@@ -1,6 +1,9 @@
 <div class="hero"
     {% if doc.hero.bg %}
-      style="background-image: url({{g.static('/src/img/%(bg)s'|format(bg=doc.hero.bg)).url.path}});"
+      style="
+        background-image: url({{g.static('/src/img/%(bg)s'|format(bg=doc.hero.bg)).url.path}});
+        background-color: {{doc.hero.bg_color}};
+      "
     {% endif %}>
   <div class="hero__content">
     <div class="hero__copy">
