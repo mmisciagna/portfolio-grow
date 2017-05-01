@@ -1,10 +1,4 @@
-<div class="hero"
-    {% if doc.hero.bg %}
-      style="
-        background-image: url({{g.static('/src/img/%(bg)s'|format(bg=doc.hero.bg)).url.path}});
-        background-color: {{doc.hero.bg_color}};
-      "
-    {% endif %}>
+<div class="hero">
   <div class="hero__content">
     <h2 class="hero__title"
         {% if doc.hero.title_indent %}
@@ -12,6 +6,11 @@
         {% endif %}>
       {{doc.title}}
     </h2>
-    <p class="hero__paragraph">{{doc.hero.paragraph}}</p>
+    {% if doc.hero.image %}
+      <div class="hero__image"
+          style="background-image: url({{g.static('/src/img/%(src)s'|format(src=doc.hero.image)).url.path}});">
+      </div>
+    {% endif %}
+    <p class="hero__paragraph">{{doc.hero.paragraph|safe}}</p>
   </div>
 </div>

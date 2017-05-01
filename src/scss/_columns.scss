@@ -1,0 +1,26 @@
+.columns {
+  padding: 0 $half-buffer;
+
+  @include tablet-up {
+    column-count: 2;
+  }
+
+  &__item {
+    padding: 0 $half-buffer;
+    margin: $buffer 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__item-title {
+    font-size: $font-size-x-lg;
+    font-weight: $font-weight-light;
+    color: $color-black-80;
+    line-height: $line-height-x-sm;
+    margin: 0 0 $quarter-buffer;
+  }
+}

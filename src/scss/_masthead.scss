@@ -39,6 +39,7 @@
   &__title-link {
     color: $color-white;
     text-decoration: none;
+    border: none;
 
     &--reversed {
       color: $color-black-80;
@@ -90,6 +91,7 @@
     letter-spacing: 1px;
     transition: color $ease-out;
     font-size: $font-size-x-sm;
+    border: none;
 
     &--is-active {
       color: $color-white;

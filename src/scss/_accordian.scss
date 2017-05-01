@@ -1,0 +1,39 @@
+.accordian {
+  &__btn {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-bottom: 1px solid $color-black-80;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+      .accordian__expand-icon {
+        fill: $color-black-80;
+      }
+    }
+  }
+
+  &__label {
+    color: $color-black-80;
+    line-height: $line-height-md;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-x-light;
+    margin: 0;
+  }
+
+  &__expand-icon {
+    fill: $color-black-25;
+    width: $icon-sm;
+    height: $icon-sm;
+    margin-left: $half-buffer;
+    transition: fill $ease-out;
+  }
+}

@@ -1,2 +1,27 @@
+$view: /views/about.html
 $title: "About"
 $order: 3
+
+hero:
+  image: "me-skydiving.jpg"
+  paragraph: "On top of web developing, designing and streamlining processes, I also enjoy spending quiet days and nights at home catching up on my favorite shows, blogs, news, inspecting elements on interesting websites and just spending good ol' fashioned quality time with my wife and kid."
+
+accordian_items:
+  - label: "Google Timeline"
+  - label: "Honors"
+
+  - label: "Education"
+    timeline:
+      - title: "BFA in Graphic Design from Savannah College of Art & Design (SCAD)"
+        date: "09/05 – 03/09"
+        bullet_points:
+          - "Magna Cum Laude"
+          - "Outstanding Achievements Award"
+          - "Art Director’s Club Top 10 Designers Nominee"
+          - "Selected for SCAD Secession — Juried Senior Show"
+          - "AIGA President, SCAD Chapter SCAD Ambassador"
+          - "Study Abroad Program, Spring 2007 & 2008 — Lacoste, Provence, France"
+
+  - label: "Past Employment"
+  - label: "Skills"
+  - label: "Fun Facts"

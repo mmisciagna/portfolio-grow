@@ -28,4 +28,5 @@ dist/
 # Other #
 ######################
 *.sketch
+*.psd
 _deps

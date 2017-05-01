@@ -6,6 +6,7 @@ $quarter-buffer: $buffer / 4;
 $max-width: 980px;
 $hero-copy-max-width: 650px;
 $masthead-height: 60px;
+$yt-video-ratio: (9 / 16) * 100%;
 
 $icon-lg: 30px;
 $icon-sm: 15px;
@@ -17,6 +18,7 @@ $z-md: 100;
 $ease-out: .3s ease-out;
 
 // Colors.
+$color-black: #000;
 $color-black-80: rgba(0,0,0,.8);
 $color-black-60: rgba(0,0,0,.6);
 $color-black-25: rgba(0,0,0,.25);

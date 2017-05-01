@@ -32,4 +32,14 @@
     max-width: $hero-copy-max-width;
     margin-bottom: 0;
   }
+
+  &__image {
+    line-height: $line-height-reset;
+    margin: $half-buffer -#{$buffer};
+    background-color: $color-white;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: top;
+    padding-bottom: $yt-video-ratio;
+  }
 }

@@ -5,3 +5,13 @@ $order: 2
 hero:
   title_indent: "-11px"
   paragraph: "YT Creative Engineers are in charge of developing and maintaing YT marketing sites. I'm also available as a prototyper for 20% projects."
+
+work_items:
+  - title: "YouTube Creators for Change"
+  - title: "YouTube Go LP"
+  - title: "YouTube Music LP"
+  - title: "My Fiber"
+  - title: "Fiber Global Nav"
+  - title: "DoubleClick Marketplace"
+  - title: "ACUX Doc Center"
+  - title: "HTML5 Rich Media Toolkit"

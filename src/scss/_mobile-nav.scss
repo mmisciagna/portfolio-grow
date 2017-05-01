@@ -43,7 +43,7 @@
     text-transform: uppercase;
     opacity: 0;
     transform: translateY($half-buffer);
-    transition: opacity $ease-out, transform $ease-out;
+    transition: opacity $ease-out, transform $ease-out, border-color $ease-out;
 
     &--is-active {
       border-bottom: 1px solid;

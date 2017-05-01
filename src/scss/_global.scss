@@ -42,10 +42,22 @@ html {
   background: $color-black-80;
 }
 
+a {
+  text-decoration: none;
+  color: $color-black-80;
+  border-bottom: 1px solid transparent;
+  transition: border-color $ease-out;
+
+  &:hover {
+    border-color: inherit;
+  }
+}
+
 p {
   margin: $half-buffer 0;
 }
 
 .main-content {
   flex: 1;
+  padding-bottom: $masthead-height;
 }

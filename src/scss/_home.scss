@@ -40,6 +40,7 @@
     transition: padding-left $ease-out;
 
     &:hover {
+      border-color: $color-black-15;
       padding-left: $quarter-buffer;
     }
 

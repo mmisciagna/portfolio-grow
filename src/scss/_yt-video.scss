@@ -1,0 +1,55 @@
+.yt-video {
+  width: 100%;
+
+  &__wrapper {
+    padding: 0;
+    padding-bottom: $yt-video-ratio;
+    position: relative;
+
+    &--btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid $color-black-15;
+      background: none;
+      width: 100%;
+      margin: 0;
+      cursor: pointer;
+      display: block;
+
+      &:hover {
+        .yt-video__play-icon {
+          .circle {
+            fill: $color-black;
+          }
+        }
+      }
+    }
+  }
+
+  &__iframe,
+  &__thumb {
+    border: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__play-icon {
+    position: absolute;
+    top: calc(50% - #{$masthead-height / 2});
+    left: calc(50% - #{$masthead-height / 2});
+    width: $masthead-height;
+    height: $masthead-height;
+
+    .circle {
+      fill: $color-black-80;
+      transition: fill $ease-out;
+    }
+
+    .triangle {
+      fill: $color-white;
+    }
+  }
+}
