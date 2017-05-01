@@ -5,24 +5,26 @@
     <div class="block__content">
       <div class="accordian">
         {% for item in doc.accordian_items %}
-          <div class="accordian__item">
-            <button class="accordian__btn">
+          <div class="accordian__item js-accordian-item">
+            <button class="accordian__btn js-accordian-toggle">
               <h3 class="accordian__label">{{item.label}}</h3>
               <svg class="accordian__expand-icon" viewBox="0 0 15 15"><g><polygon transform="translate(7.500000, 7.500000) scale(1, -1) translate(-7.500000, -7.500000) " points="7.5 0 15 15 0 15"/></g</svg>
             </button>
-            {% if item.timeline %}
-              {% for moment in item.timeline %}
-                <div class="accordian__content">
+            <div class="accordian__content js-accordian-content">
+              {% if item.timeline %}
+                {% for moment in item.timeline %}
                   <div class="accordian__timeline-date">{{moment.date}}</div>
                   <div class="accordian__timeline-title">{{moment.title}}</div>
-                  <ul class="accordian__timeline-bullet-points">
-                    {% for point in moment.bullet_points %}
-                      <li class="accordian__timeline-point">{{point}}</li>
-                    {% endfor %}
-                  </ul>
-                </div>
-              {% endfor %}
-            {% endif %}
+                  {% if moment.bullet_points %}
+                    <ul class="accordian__timeline-bullet-points">
+                      {% for point in moment.bullet_points %}
+                        <li class="accordian__timeline-bullet-point">{{point}}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
           </div>
         {% endfor %}
       </div>

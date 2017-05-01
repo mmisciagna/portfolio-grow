@@ -1,4 +1,16 @@
 .accordian {
+  &__item {
+    &--is-expanded {
+      .accordian__expand-icon {
+        transform: rotate(180deg);
+      }
+
+      .accordian__expand-icon {
+        fill: $color-black-80;
+      }
+    }
+  }
+
   &__btn {
     -webkit-appearance: none;
     appearance: none;
@@ -34,6 +46,36 @@
     width: $icon-sm;
     height: $icon-sm;
     margin-left: $half-buffer;
-    transition: fill $ease-out;
+    transition: fill $ease-out, transform $ease-out;
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height $ease-out;
+  }
+
+  &__timeline-date {
+    font-size: $font-size-md;
+    color: $color-black-60;
+    line-height: $line-height-md;
+    margin-top: $quarter-buffer;
+  }
+
+  &__timeline-title {
+    font-size: $font-size-md;
+    color: $color-black-80;
+    line-height: $line-height-sm;
+    margin-bottom: $half-buffer;
+  }
+
+  &__timeline-bullet-points {
+    padding-left: $half-buffer;
+    margin: 0;
+    list-style-position: outside;
+  }
+
+  &__timeline-bullet-point {
+    margin: $quarter-buffer 0;
+    position: relative;
   }
 }
