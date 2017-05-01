@@ -1,13 +1,17 @@
 <div class="mobile-nav js-mobile-nav" aria-hidden="true">
   {% include "/views/partials/masthead-reversed.html" %}
-  <nav class="mobile-nav__items" role="tablist">
-    {% for page in g.docs('pages') %}
-      <a class="mobile-nav__item{% if doc == page %} mobile-nav__item--is-active{% endif %} js-mobile-nav-item"
-          role="tab"
-          aria-selected="{% if doc == page %}true{% else %}false{% endif %}"
-          href="{{page.url.path}}">
-        {{page.title}}
-      </a>
-    {% endfor %}
-  </nav>
+  <div class="mobile-nav__list table" role="tablist">
+    <div class="table__centered">
+      <nav class="mobile-nav__items" role="tablist">
+        {% for page in g.docs('pages') %}
+          <a class="mobile-nav__item{% if doc == page %} mobile-nav__item--is-active{% endif %} js-mobile-nav-item"
+              role="tab"
+              aria-selected="{% if doc == page %}true{% else %}false{% endif %}"
+              href="{{page.url.path}}">
+            {{page.title}}
+          </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
 </div>

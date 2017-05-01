@@ -1,5 +1,7 @@
 .masthead-offset {
-  height: $masthead-height;
+  min-height: $masthead-height;
+  max-height: $masthead-height;
+  width: 100%;
 }
 
 .masthead {
