@@ -32,6 +32,10 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: 1px dotted $color-black-25;
+}
+
 ::-moz-selection {
   color: $color-white-80;
   background: $color-black-80;

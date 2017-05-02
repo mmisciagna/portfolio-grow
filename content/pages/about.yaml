@@ -6,13 +6,43 @@ hero:
   image: "me-skydiving.jpg"
   paragraph: "On top of web developing, designing and streamlining processes, I also enjoy spending quiet days and nights at home catching up on my favorite shows, blogs, news, inspecting elements on interesting websites and just spending good ol' fashioned quality time with my wife and kid."
 
-accordian_items:
+accordion_items:
   - label: "Google Timeline"
+    timeline:
+      - title: "Brand Studio"
+        subtitle: "YouTube Creative Engineer"
+        date: "09/15 – Present"
+        paragraphs:
+          - "We are responsible for building engaging and meaningful web destinations for YouTube. We write and maintain production-ready code with various frontend technologies and frameworks."
+
+      - title: "DoubleClick Rich Media"
+        subtitle: "Creative Specialist"
+        date: "04/14 – 09/15"
+        bullet_points:
+          - "Technical in nature with a creative flare and strong industry knowledge"
+          - "Collaborated with other designers and developers to scale full-service production"
+      - title: "gTech MTS Wildfire"
+        subtitle: "Designer and Front-end developer"
+        date: "12/13 – 04/14"
+        bullet_points:
+          - "Maintained Wildfire’s full-service clients as we transitioned into gTech MTS"
+          - "Simplify the lives of Creative designers and developers in getting Rich Media ads built delivered via DoubleClick Studio"
+      - title: "Wildfire by Google"
+        subtitle: "Designer and Front-end developer"
+        date: "12/13 – 04/14"
+        bullet_points:
+          - "Designed client and user-facing campaigns that would become YouTube gadgets, Facebook tabs, stand-alone microsites and/or mobile interfaces"
+          - "Developed my, and others’, campaign designs on the Wildfire Pages platform using an array of different frameworks including, but not limited to, HTML5, CSS3, Javascript, jQuery, AngularJS and Liquid"
+          - "Worked with APIs including YouTube, Google+, Facebook and Twitter"
+          - "Lead efforts for standardization of designs for campaigns and mobile interfaces"
+          - "Consulted on technical and design issues for pre-sales and client escalations"
+
   - label: "Honors"
 
   - label: "Education"
     timeline:
-      - title: "BFA in Graphic Design from Savannah College of Art & Design (SCAD)"
+      - title: "Savannah College of Art & Design (SCAD)"
+        subtitle: "BFA in Graphic Design"
         date: "09/05 – 03/09"
         bullet_points:
           - "Magna Cum Laude"

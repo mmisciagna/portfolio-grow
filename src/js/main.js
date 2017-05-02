@@ -1,6 +1,6 @@
-const Accordian = require('./accordian');
+const Accordion = require('./accordion');
 const MobileNav = require('./mobile-nav');
 
 
-Accordian.init();
+Accordion.init();
 MobileNav.init();
