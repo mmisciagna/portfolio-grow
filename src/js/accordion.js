@@ -6,10 +6,9 @@ const Selectors = {
   ITEM: '.js-accordion-item',
   TOGGLE: '.js-accordion-toggle'
 };
-
 const EXPANDED_CLASSNAME = 'accordion__item--is-expanded';
-
 const ARIA = 'aria-expanded';
+const ESC_KEYCODE = 27;
 
 
 class Accordion {
@@ -40,14 +39,10 @@ class Accordion {
     });
   }
 
-  setMaxHeight() {
-    this.content.style.maxHeight = this.isExpanded() ?
-        this.contentHeight + 'px': 0;
-  }
-
   setContentMaxHeight() {
     this.getContentHeight();
-    this.setMaxHeight();
+    this.content.style.maxHeight =
+        this.isExpanded() ? this.contentHeight + 'px': 0;
   }
 
   toggle() {
@@ -56,8 +51,17 @@ class Accordion {
     this.setContentMaxHeight();
   }
 
+  handleKeyEvents(e) {
+    if (e.keyCode == ESC_KEYCODE) {
+      this.root.classList.remove(EXPANDED_CLASSNAME);
+      this.content.setAttribute(ARIA, false);
+      this.content.style.maxHeight = 0;
+    }
+  }
+
   registerAccordionEvents() {
     window.addEventListener('resize', this.setContentMaxHeight.bind(this));
+    window.addEventListener('keyup', this.handleKeyEvents.bind(this));
     utils.delegate(this.toggleBtn, Selectors.TOGGLE, 'click',
         this.toggle.bind(this));
   }
@@ -65,7 +69,5 @@ class Accordion {
 
 module.exports.init = () => {
   const accordionItems = document.querySelectorAll(Selectors.ITEM);
-  accordionItems.forEach((item) => {
-    new Accordion(item);
-  });
+  accordionItems.forEach(item => new Accordion(item));
 };

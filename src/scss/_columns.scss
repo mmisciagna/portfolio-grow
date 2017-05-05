@@ -2,7 +2,8 @@
   padding: 0 $half-buffer;
 
   @include tablet-up {
-    column-count: 2;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -11,8 +12,15 @@
     page-break-inside: avoid;
     break-inside: avoid;
 
-    &:first-child {
-      margin-top: 0;
+    @include tablet-up {
+      width: 50%;
+      margin: $half-buffer 0;
+    }
+
+    &--no-top-margin {
+      @include tablet-up {
+        margin-top: 0;
+      }
     }
   }
 
@@ -22,5 +30,9 @@
     color: $color-black-80;
     line-height: $line-height-x-sm;
     margin: 0 0 $quarter-buffer;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

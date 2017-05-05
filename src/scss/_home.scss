@@ -39,7 +39,7 @@
     text-decoration: none;
     transition: padding-left $ease-out;
 
-    &:hover {
+    @include hover {
       border-color: $color-black-15;
       padding-left: $quarter-buffer;
     }

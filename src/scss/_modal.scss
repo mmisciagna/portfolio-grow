@@ -1,0 +1,141 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $color-black-25;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: all $ease-out;
+
+  &--is-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+  }
+}
+
+.modal {
+  opacity: 0;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: $max-width - $buffer;
+  transition: opacity $ease-out;
+  visibility: hidden;
+  z-index: 0;
+
+  @include tablet-up {
+    width: calc(100% - #{$buffer});
+    height: auto;
+  }
+
+  &--is-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+
+    .modal__content {
+      transform: scale(1);
+    }
+  }
+
+  &__content {
+    background: $color-white;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    transform: scale(0);
+    transition: transform $ease-out;
+
+    @include sm-desktop-up {
+      height: auto;
+    }
+  }
+
+  &__close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: $half-buffer;
+    top: $half-buffer;
+    padding: 0;
+
+    @include hover {
+      .modal__close-icon {
+        fill: $color-black-80;
+      }
+    }
+  }
+
+  &__close-icon {
+    fill: $color-black-25;
+    width: $icon-lg;
+    height: $icon-lg;
+    transition: fill $ease-out;
+  }
+
+  &__title {
+    background: $color-white;
+    color: $color-black-80;
+    border-bottom: 1px solid $color-black-80;
+    font-size: $font-size-x-lg;
+    font-weight: $font-weight-light;
+    line-height: $line-height-x-sm;
+    margin: 0;
+    padding: $buffer ($half-buffer + $icon-lg + $half-buffer) $buffer $half-buffer;
+  }
+
+  &__section {
+    margin: $buffer auto;
+    padding: 0 $half-buffer;
+
+    &--video {
+      margin: 0;
+      padding: 0;
+
+      @include tablet-up {
+        margin: $half-buffer;
+      }
+    }
+  }
+
+  &__paragraph {
+    margin: $half-buffer 0;
+  }
+
+  &__launch {
+    font-size: $font-size-md;
+    line-height: $line-height-lg;
+    margin: 0 $half-buffer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-black-80;
+    transition: fill $ease-out;
+
+    @include tablet-up {
+      margin: 0;
+    }
+
+    @include hover {
+      .modal__launch-icon {
+        fill: $color-black-80;
+      }
+    }
+  }
+
+  &__launch-icon {
+    width: $icon-sm;
+    height: $icon-sm;
+    fill: $color-black-60;
+  }
+}

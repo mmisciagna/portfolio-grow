@@ -7,27 +7,29 @@
       </button>
       <div class="accordion__content js-accordion-content"
           aria-expanded="false">
-        {% if item.timeline %}
-          {% for moment in item.timeline %}
-            <div class="accordion__timeline">
-              <div class="accordion__date">{{moment.date}}</div>
-              <div class="accordion__title">{{moment.title}}</div>
-              <div class="accordion__subtitle">{{moment.subtitle}}</div>
-              {% if moment.bullet_points %}
-                <ul class="accordion__bullet-points">
-                  {% for point in moment.bullet_points %}
-                    <li class="accordion__bullet-point">{{point}}</li>
-                  {% endfor %}
-                </ul>
-              {% endif %} <!-- end if moment.bullet_points -->
-              {% if moment.paragraphs %}
-                {% for p in moment.paragraphs %}
-                  <p class="accordion__paragraph">{{p}}</p>
-                {% endfor %} <!-- end for moment.paragraphs -->
-              {% endif %} <!-- end if moment.paragraphs -->
-            </div> <!-- end .accordion__timeline -->
-          {% endfor %} <!-- end for item.timeline -->
-        {% endif %} <!-- end if timeline -->
+        {% for info in item.info %}
+          <div class="accordion__info">
+            <div class="accordion__date">{{info.date}}</div>
+            {% if info.title %}
+              <div class="accordion__title">{{info.title}}</div>
+            {% endif %}
+            {% if info.subtitle %}
+              <div class="accordion__subtitle">{{info.subtitle}}</div>
+            {% endif %}
+            {% if info.bullet_points %}
+              <ul class="accordion__bullet-points">
+                {% for point in info.bullet_points %}
+                  <li class="accordion__bullet-point">{{point|safe}}</li>
+                {% endfor %}
+              </ul>
+            {% endif %} <!-- end if info.bullet_points -->
+            {% if info.paragraphs %}
+              {% for p in info.paragraphs %}
+                <p class="accordion__paragraph">{{p|safe}}</p>
+              {% endfor %} <!-- end for info.paragraphs -->
+            {% endif %} <!-- end if info.paragraphs -->
+          </div> <!-- end .accordion__info -->
+        {% endfor %} <!-- end for item.info -->
       </div> <!-- end .accordion__content -->
     </div> <!-- end .accordion__item -->
   {% endfor %} <!-- end for doc.accordion_items -->

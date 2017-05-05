@@ -1,6 +1,10 @@
 .accordion {
   &__item {
     &--is-expanded {
+      .accordion__content {
+        border-bottom: 1px solid $color-black-15;
+      }
+
       .accordion__expand-icon {
         transform: rotate(180deg);
         fill: $color-black-80;
@@ -23,7 +27,7 @@
     cursor: pointer;
     width: 100%;
 
-    &:hover {
+    @include hover {
       .accordion__expand-icon {
         fill: $color-black-80;
       }
@@ -57,7 +61,7 @@
     }
   }
 
-  &__timeline {
+  &__info {
     margin: $half-buffer 0;
 
     @include tablet-up {

@@ -1,0 +1,45 @@
+{% set work_content = g.doc('/content/pages/work.yaml') %}
+
+<div class="modal-overlay" close-modal></div>
+{% for work in work_content.work_items %}
+  <div class="columns__item
+      {% if loop.index == 1 or loop.index == 2 %} columns__item--no-top-margin{% endif %}">
+    <h3 class="columns__item-title">{{work.title}}</h3>
+    <div class="yt-video">
+      <button class="yt-video__wrapper yt-video__wrapper--btn"
+          reveal-modal="{{work.title}}"
+          aria-label="{{work.title}} details">
+        <img class="yt-video__thumb"
+            src="{{g.static('/src/img/video-thumb-%(slug)s.jpg'|format(slug=work.title|slug)).url.path}}"
+            alt="{{work.title}} video thumbnail">
+        <svg class="yt-video__play-icon" viewBox="0 0 60 60"><g><circle class="circle" cx="30" cy="30" r="30"/><polygon class="triangle" transform="translate(33.000000, 30.000000) rotate(90.000000) translate(-33.000000, -30.000000) " points="33 20 43 40 23 40"/></g></svg>
+      </button>
+    </div>
+  </div>
+
+  <section class="modal" modal="{{work.title}}" aria-hidden="true">
+    <div class="modal__content">
+      <button class="modal__close-button" close-modal>
+        <svg  class="modal__close-icon" viewBox="0 0 30 30"><g transform="translate(-250.000000, -15.000000)"><g transform="translate(250.000000, 15.000000)"><path d="M1,3.00001915 L1,26.9999809 C1,28.1020493 1.89709056,29 3.00001915,29 L26.9999809,29 C28.1020493,29 29,28.1029094 29,26.9999809 L29,3.00001915 C29,1.89795069 28.1029094,1 26.9999809,1 L3.00001915,1 C1.89795069,1 1,1.89709056 1,3.00001915 Z M0,3.00001915 C0,1.34315432 1.34731857,0 3.00001915,0 L26.9999809,0 C28.6568457,0 30,1.34731857 30,3.00001915 L30,26.9999809 C30,28.6568457 28.6526814,30 26.9999809,30 L3.00001915,30 C1.34315432,30 0,28.6526814 0,26.9999809 L0,3.00001915 Z" id="group" fill-rule="nonzero"></path><rect transform="translate(15.000000, 15.500000) rotate(45.000000) translate(-15.000000, -15.500000) " x="5" y="15" width="20" height="1"></rect><rect transform="translate(15.000000, 15.500000) rotate(-45.000000) translate(-15.000000, -15.500000) " x="5" y="15" width="20" height="1"></rect></g></g></svg>
+      </button>
+      <h2 class="modal__title">{{work.title}}</h2>
+      <div class="modal__section modal__section--video">
+        <div class="yt-video">
+          <div class="yt-video__wrapper">
+            <div class="yt-video__iframe"
+                id="player-{{loop.index}}"
+                yt-player="{{work.video}}">
+            </div>
+          </div>
+        </div>
+        {% if work.href %}
+          <a class="modal__launch" href="{{work.href}}">
+            Launch
+            <svg class="modal__launch-icon" viewBox="0 0 15 15"><g><path d="M11.4852814,2 L8.14545455,2 L8,1.33333333 L8,-4.16333634e-17 L15,0 L15,6.96666667 L13,6.96666667 L13,3.3137085 L6.41421356,9.89949494 L5,8.48528137 L11.4852814,2 Z M15,10.0333333 L15,15 L0,15 L0,0 L5,0 L5,2 L2,2 L2,13 L13,13 L13,10.0333333 L15,10.0333333 Z"/></g></svg>
+          </a>
+        {% endif %}
+      </div>
+      <div class="modal__section"></div>
+    </div>
+  </section>
+{% endfor %}

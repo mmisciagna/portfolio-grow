@@ -16,7 +16,7 @@
       cursor: pointer;
       display: block;
 
-      &:hover {
+      @include hover {
         .yt-video__play-icon {
           .circle {
             fill: $color-black;

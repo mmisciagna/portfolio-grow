@@ -58,9 +58,20 @@
     background: none;
     padding: 0;
     line-height: $line-height-reset;
+    cursor: pointer;
 
     @include tablet-up {
       display: none;
+    }
+
+    @include hover {
+      .masthead__menu-icon {
+        fill: $color-white;
+      }
+
+      .masthead__menu-icon--reversed {
+        fill: $color-black;
+      }
     }
   }
 
@@ -68,9 +79,10 @@
     width: $icon-lg;
     height: $icon-lg;
     fill: $color-white-80;
+    transition: fill $ease-out;
 
     &--reversed {
-      fill: $color-black-80;
+      fill: $color-black-60;
     }
   }
 
@@ -101,7 +113,7 @@
       color: $color-white;
     }
 
-    &:hover {
+    @include hover {
       color: $color-white;
     }
   }

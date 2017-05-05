@@ -77,3 +77,9 @@ $breakpoint-desktop: 1200px;
     @content;
   }
 }
+
+@mixin hover {
+  .no-touch &:hover {
+    @content;
+  }
+}

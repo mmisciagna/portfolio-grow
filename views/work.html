@@ -3,20 +3,7 @@
 {% block page_content %}
   <div class="block block--bottom">
     <div class="block__content columns">
-      {% for item in doc.work_items %}
-        <div class="columns__item">
-          <h3 class="columns__item-title">{{item.title}}</h3>
-          <div class="yt-video">
-            <button class="yt-video__wrapper yt-video__wrapper--btn"
-                aria-label="{{item.title}} details">
-              <img class="yt-video__thumb"
-                  src="{{g.static('/src/img/video-thumb-%(slug)s.jpg'|format(slug=item.title|slug)).url.path}}"
-                  alt="{{item.title}} video thumbnail">
-              <svg class="yt-video__play-icon" viewBox="0 0 60 60"><g><circle class="circle" cx="30" cy="30" r="30"/><polygon class="triangle" transform="translate(33.000000, 30.000000) rotate(90.000000) translate(-33.000000, -30.000000) " points="33 20 43 40 23 40"/></g></svg>
-            </button>
-          </div>
-        </div>
-      {% endfor %}
+      {% include "/views/partials/modal.html" %}
     </div>
   </div>
 {% endblock %}

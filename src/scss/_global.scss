@@ -52,7 +52,7 @@ a {
   border-bottom: 1px solid transparent;
   transition: border-color $ease-out;
 
-  &:hover {
+  @include hover {
     border-color: inherit;
   }
 }
