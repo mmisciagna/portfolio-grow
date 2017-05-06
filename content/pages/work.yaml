@@ -7,20 +7,50 @@ hero:
   paragraph: "YT Creative Engineers are in charge of developing and maintaing YT marketing sites. I'm also available as a prototyper for 20% projects."
 
 work_items:
-  # - title: "YouTube Creators for Change"
-  #   video: ""
-  # - title: "YouTube Go LP"
-  #   video: ""
+  - title: "YouTube Creators for Change"
+    video: ""
+
+  - title: "YouTube Go LP"
+    video: ""
+
   - title: "YouTube Music LP"
     video: "z0ycdDKc_hQ"
+
   - title: "My Fiber"
     video: "0iQQ4iBIOw4"
     href: "https://my-fiber-dot-show.googleplex.com/my-fiber/#/home/pared"
+    details:
+      - subtitle: "Role"
+        text:
+          - "20% UX Engineer"
+      - subtitle: "Tools"
+        text:
+          - "Material AngularJS, Firebase, App Engine"
+      - subtitle: "Goal"
+        text:
+          - "Build a responsive prototype to the designer's pixel-perfect design for mobile testing using Material design elements."
+    other_details:
+      - subtitle: "Challenges"
+        text:
+          - "For testing, the UX Researcher wanted to adjust the content based on the user so using Firebase to let her do that without my support or getting into the code herself was important. Firebase also allowed for the user to update content (i.e. Network name, password, contact info) in real-time while reflecting the updates on every page of the prototype."
+          - "Angular's Material grid layout doesn't allow the card height to adjust with the content. Using the Masonry JS plugin to allow for dynamic card heights was an easy way to achieve the designer's goal while at the same time adding a nice animation when the cards reorganize themselves on window resize."
+
   - title: "Fiber Global Nav"
     video: "lcxHpMJFTOY"
+    href: "https://fiber-global-nav-dot-show.googleplex.com/fiber-global-nav/#/fiber"
+    role: "20% UX Engineer"
+
   - title: "DoubleClick Marketplace"
     video: "31KX9IRqaro"
+    href: "https://marketplace-proto.googleplex.com/#/marketplace"
+    role: "20% UX Engineer"
+
   - title: "ACUX Doc Center"
     video: "Sklddw8GsRE"
+    href: "https://acux-doc-center.googleplex.com/"
+    role: "20% UX Engineer"
+
   - title: "HTML5 Rich Media Toolkit"
     video: "Fdx61hN7Qbo"
+    href: "https://mmisciagna.users.x20web.corp.google.com/www/h5_toolkit/ng-index.html#/html5/toolkit"
+    role: "Creative Specialist, Designer, UX Engineer"

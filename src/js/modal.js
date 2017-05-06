@@ -15,6 +15,7 @@ const ModalAttributes = {
 
 const Selectors = {
   CLOSE: '[close-modal]',
+  CONTENT: '.js-modal-content',
   MODAL: `[${ModalAttributes.MODAL}]`,
   OVERLAY: '.modal-overlay',
   REVEAL: `[${ModalAttributes.REVEAL}]`,
@@ -22,8 +23,9 @@ const Selectors = {
 }
 
 const ESCAPE_KEYCODE = 27;
-const MAX_MOBILE_WIDTH = 600;
+const SM_DESKTOP_WIDTH = 900;
 const OVERLAY = document.querySelector(Selectors.OVERLAY);
+
 
 class Modal {
   constructor() {
@@ -44,11 +46,15 @@ class Modal {
 
   positionModal() {
     if (this.modal) {
-      if (window.innerWidth > MAX_MOBILE_WIDTH) {
-        const modalWidth = this.modal.offsetWidth;
+      if (window.innerWidth >= SM_DESKTOP_WIDTH) {
+        const contentEl = this.modal.querySelector(Selectors.CONTENT);
+        const contentWidth = contentEl.offsetWidth;
+        const contentHeight = contentEl.offsetHeight;
         const modalHeight = this.modal.offsetHeight;
-        this.modal.style.left = `calc(50% - ${modalWidth / 2}px)`;
-        this.modal.style.top = `calc(50% - ${modalHeight / 2}px)`;
+
+        this.modal.style.left = `calc(50% - ${contentWidth / 2}px)`;
+        this.modal.style.top = contentHeight + 40 >= window.innerHeight ?
+            '20px' : `calc(50% - ${modalHeight / 2}px)`;
       } else {
         this.modal.removeAttribute('style');
       }

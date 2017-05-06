@@ -25,7 +25,7 @@
   }
 
   &__item-title {
-    font-size: $font-size-x-lg;
+    font-size: $font-size-lg;
     font-weight: $font-weight-light;
     color: $color-black-80;
     line-height: $line-height-x-sm;
@@ -34,5 +34,10 @@
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include sm-desktop-up {
+      font-weight: $font-weight-x-light;
+      font-size: $font-size-x-lg;
+    }
   }
 }

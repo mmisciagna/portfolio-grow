@@ -8,7 +8,7 @@
     margin: 0 0 $quarter-buffer;
     line-height: $line-height-reset;
 
-    @include tablet-up {
+    @include sm-desktop-up {
       font-size: $font-size-xxx-lg;
     }
   }
@@ -19,7 +19,7 @@
     line-height: $line-height-md;
     max-width: $hero-copy-max-width;
 
-    @include tablet-up {
+    @include sm-desktop-up {
       font-size: $font-size-lg;
     }
   }
@@ -44,7 +44,7 @@
       padding-left: $quarter-buffer;
     }
 
-    @include tablet-up {
+    @include sm-desktop-up {
       font-size: $font-size-lg;
     }
   }

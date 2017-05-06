@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: $color-black-25;
+  background: $color-black-80;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -29,7 +29,7 @@
   visibility: hidden;
   z-index: 0;
 
-  @include tablet-up {
+  @include sm-desktop-up {
     width: calc(100% - #{$buffer});
     height: auto;
   }
@@ -38,6 +38,13 @@
     opacity: 1;
     visibility: visible;
     z-index: 10000;
+    max-height: 100%;
+
+    @include sm-desktop-up {
+      max-height: calc(100% - #{$buffer});
+      overflow: hidden;
+      overflow-y: auto;
+    }
 
     .modal__content {
       transform: scale(1);
@@ -94,24 +101,6 @@
     padding: $buffer ($half-buffer + $icon-lg + $half-buffer) $buffer $half-buffer;
   }
 
-  &__section {
-    margin: $buffer auto;
-    padding: 0 $half-buffer;
-
-    &--video {
-      margin: 0;
-      padding: 0;
-
-      @include tablet-up {
-        margin: $half-buffer;
-      }
-    }
-  }
-
-  &__paragraph {
-    margin: $half-buffer 0;
-  }
-
   &__launch {
     font-size: $font-size-md;
     line-height: $line-height-lg;
@@ -137,5 +126,69 @@
     width: $icon-sm;
     height: $icon-sm;
     fill: $color-black-60;
+  }
+
+  &__sections {
+    @include sm-desktop-up {
+      display: flex;
+    }
+  }
+
+  &__section {
+    margin: $half-buffer auto;
+    padding: 0 $half-buffer;
+
+    @include tablet-up {
+      padding: 0;
+    }
+
+    @include sm-desktop-up {
+      margin: 0;
+      padding: $half-buffer;
+      width: 50%;
+    }
+
+    &--video {
+      margin: 0;
+      padding: 0;
+
+      @include tablet-up {
+        margin: $half-buffer;
+      }
+    }
+
+    &--details {
+      @include tablet-up {
+        display: flex;
+      }
+
+      @include sm-desktop-up {
+        display: block;
+      }
+    }
+  }
+
+  &__section-block {
+    margin: $half-buffer 0;
+    line-height: $line-height-md;
+
+    @include tablet-up {
+      padding: 0 $half-buffer;
+      margin-top: 0;
+      width: 50%;
+    }
+
+    @include sm-desktop-up {
+      width: 100%;
+    }
+  }
+
+  &__details-subtitle {
+    font-size: $font-size-md;
+    color: $color-black-25;
+  }
+
+  &__details-paragraph {
+    margin: 0 0 1em;
   }
 }
