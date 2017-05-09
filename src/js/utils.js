@@ -40,6 +40,33 @@ const utils = {
       return matches.call(element, selector);
     }
   },
+
+  /**
+   * Waits the given amount of time before applying the given function.
+   * @param {!Function<?>} callback Function to apply after the given time has
+   *     been reached.
+   * @param {number} threshold The amount of time in milliseconds to wait before
+   *     applying the callback.
+   * @param {boolean} execAsap Whether to apply the callback immediately or not.
+   * @return {!Function}
+   */
+  debounce(callback, threshold, execAsap) {
+    let timeout;
+    return () => {
+      const  obj = this;
+      const args = arguments;
+      const delayed = () => {
+        if (!execAsap) callback.apply(obj, args);
+        timeout = null;
+      };
+      if (timeout) {
+        clearTimeout(timeout);
+      } else if (execAsap) {
+        callback.apply(obj, args);
+      }
+      timeout = setTimeout(delayed, threshold || 100);
+    };
+  },
 };
 
 module.exports = utils;

@@ -1,69 +1,77 @@
-.modal-overlay {
+.modals {
   position: fixed;
   top: 0;
   left: 0;
-  background: $color-black-80;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   visibility: hidden;
   z-index: 0;
-  transition: all $ease-out;
-
-  &--is-active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10000;
-  }
-}
-
-.modal {
-  opacity: 0;
-  position: fixed;
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  max-width: $max-width - $buffer;
-  transition: opacity $ease-out;
-  visibility: hidden;
-  z-index: 0;
+  transition: all .3s ease-out;
 
   @include sm-desktop-up {
-    width: calc(100% - #{$buffer});
-    height: auto;
+    padding: $half-buffer;
   }
 
   &--is-active {
     opacity: 1;
     visibility: visible;
     z-index: 10000;
-    max-height: 100%;
 
-    @include sm-desktop-up {
-      max-height: calc(100% - #{$buffer});
-      overflow: hidden;
-      overflow-y: auto;
-    }
-
-    .modal__content {
+    .modal {
       transform: scale(1);
     }
   }
 
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-black-80;
+    width: 100%;
+    height: 100%;
+
+    &--is-active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 10000;
+
+      .modal {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  transform: scale(0);
+  transition: transform .3s ease-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  @include sm-desktop-up {
+    position: relative;
+    height: auto;
+    max-height: 100%;
+    max-width: $max-width;
+  }
+
   &__content {
     background: $color-white;
-    height: 100%;
-    max-height: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-    position: relative;
     width: 100%;
-    transform: scale(0);
-    transition: transform $ease-out;
+    overflow: hidden;
+    display: none;
 
-    @include sm-desktop-up {
-      height: auto;
+    &--is-active {
+      display: block;
     }
   }
 

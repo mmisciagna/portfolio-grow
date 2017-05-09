@@ -1,6 +1,6 @@
 const Accordion = require('./accordion');
 const MobileNav = require('./mobile-nav');
-const Modals = require('./modals');
+const Modal = require('./modal');
 
 const isMobile = () => {
   if (navigator.userAgent.match(/Android/i)

@@ -45,6 +45,10 @@ class Accordion {
         this.isExpanded() ? this.contentHeight + 'px': 0;
   }
 
+  debounceContentHeight() {
+    utils.debounce(this.setContentMaxHeight.bind(this), 300)();
+  }
+
   toggle() {
     this.root.classList.toggle(EXPANDED_CLASSNAME);
     this.content.setAttribute(ARIA, this.isExpanded());
@@ -60,7 +64,7 @@ class Accordion {
   }
 
   registerAccordionEvents() {
-    window.addEventListener('resize', this.setContentMaxHeight.bind(this));
+    window.addEventListener('resize', this.debounceContentHeight.bind(this));
     window.addEventListener('keyup', this.handleKeyEvents.bind(this));
     utils.delegate(this.toggleBtn, Selectors.TOGGLE, 'click',
         this.toggle.bind(this));

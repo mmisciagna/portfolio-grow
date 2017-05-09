@@ -2,9 +2,10 @@ const utils = require('./utils');
 
 
 const ModalClassNames = {
-  ACTIVE: 'modal--is-active',
+  CONTENT_ACTIVE: 'modal__content--is-active',
   DISABLE_SCROLLING: 'no-scroll',
-  OVERLAY_ACTIVE: 'modal-overlay--is-active'
+  OVERLAY_ACTIVE: 'modal-overlay--is-active',
+  ROOT_ACTIVE: 'modals--is-active'
 }
 
 const ModalAttributes = {
@@ -17,52 +18,37 @@ const Selectors = {
   CLOSE: '[close-modal]',
   CONTENT: '.js-modal-content',
   MODAL: `[${ModalAttributes.MODAL}]`,
-  OVERLAY: '.modal-overlay',
+  OVERLAY: '.js-modals-overlay',
   REVEAL: `[${ModalAttributes.REVEAL}]`,
+  ROOT: '.js-modals',
   VIDEO_PLAYER: `[${ModalAttributes.VIDEO_PLAYER}]`
 }
 
 const ESCAPE_KEYCODE = 27;
 const SM_DESKTOP_WIDTH = 900;
 const OVERLAY = document.querySelector(Selectors.OVERLAY);
+const ALL_CONTENT = document.querySelectorAll(Selectors.CONTENT);
 
 
 class Modal {
   constructor() {
-    this.modal;
+    this.root = document.querySelector(Selectors.ROOT);
+    this.modalContent;
     this.player;
     this.videoList = {};
 
     this.registerModalEvents();
   }
 
-  getModal(target) {
-    const modalName = target.getAttribute(ModalAttributes.REVEAL);
-    this.modal = document.querySelector(
-        `[${ModalAttributes.MODAL}="${modalName}"]`);
-    this.positionModal();
+  getModalContent(target) {
+    const targetName = target.getAttribute(ModalAttributes.REVEAL);
+    this.modalContent = this.root.querySelector(
+        `[${ModalAttributes.MODAL}="${targetName}"]`);
     this.setupVideo();
   }
 
-  positionModal() {
-    if (this.modal) {
-      if (window.innerWidth >= SM_DESKTOP_WIDTH) {
-        const contentEl = this.modal.querySelector(Selectors.CONTENT);
-        const contentWidth = contentEl.offsetWidth;
-        const contentHeight = contentEl.offsetHeight;
-        const modalHeight = this.modal.offsetHeight;
-
-        this.modal.style.left = `calc(50% - ${contentWidth / 2}px)`;
-        this.modal.style.top = contentHeight + 40 >= window.innerHeight ?
-            '20px' : `calc(50% - ${modalHeight / 2}px)`;
-      } else {
-        this.modal.removeAttribute('style');
-      }
-    }
-  }
-
   setupVideo() {
-    const playerEl = this.modal.querySelector(Selectors.VIDEO_PLAYER);
+    const playerEl = this.modalContent.querySelector(Selectors.VIDEO_PLAYER);
     const playerId = playerEl.getAttribute('id');
     const videoId = playerEl.getAttribute(ModalAttributes.VIDEO_PLAYER);
 
@@ -88,24 +74,30 @@ class Modal {
   }
 
   revealModal(target) {
-    this.getModal(target);
+    this.getModalContent(target);
+
+    ALL_CONTENT.forEach((content) => {
+      content.classList.remove(ModalClassNames.CONTENT_ACTIVE);
+    });
+
+    this.modalContent.classList.add(ModalClassNames.CONTENT_ACTIVE);
     OVERLAY.classList.add(ModalClassNames.OVERLAY_ACTIVE);
-    this.modal.classList.add(ModalClassNames.ACTIVE);
-    this.modal.setAttribute('aria-hidden', false);
+    this.root.classList.add(ModalClassNames.ROOT_ACTIVE);
     document.body.classList.add(ModalClassNames.DISABLE_SCROLLING);
+    this.root.setAttribute('aria-hidden', false);
   }
 
   closeModal() {
     this.player.pauseVideo();
     OVERLAY.classList.remove(ModalClassNames.OVERLAY_ACTIVE);
-    this.modal.classList.remove(ModalClassNames.ACTIVE);
-    this.modal.setAttribute('aria-hidden', true);
+    this.root.classList.remove(ModalClassNames.ROOT_ACTIVE);
     document.body.classList.remove(ModalClassNames.DISABLE_SCROLLING);
+    this.root.setAttribute('aria-hidden', true);
   }
 
   handelKeyEvents(e) {
-    if (this.modal &&
-        this.modal.classList.contains(ModalClassNames.ACTIVE) &&
+    if (this.root &&
+        this.root.classList.contains(ModalClassNames.ROOT_ACTIVE) &&
         e.keyCode == ESCAPE_KEYCODE) {
       this.closeModal();
     }
@@ -117,7 +109,6 @@ class Modal {
     utils.delegate(document.body, Selectors.CLOSE, 'click',
         this.closeModal.bind(this));
 
-    window.addEventListener('resize', this.positionModal.bind(this));
     document.body.addEventListener('keyup', this.handelKeyEvents.bind(this));
   }
 };
