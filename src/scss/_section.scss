@@ -1,11 +1,56 @@
 .section {
-  margin: $buffer-2 auto;
+  margin: $buffer-6 auto;
   max-width: $max-width;
 
+  &__drop-cap {
+    color: $color-accent;
+    display: inline-block;
+    float: left;
+    font-size: 100px;
+    line-height: 90px;
+    margin-left: -12px;
+    padding: $buffer-1 2px 0 0;
+  }
+
   &__headline {
-    font-size: $font-size-headline;
+    color: $color-primary-dark;
+    font-size: $font-size-l;
     font-weight: $font-weight-sb;
     line-height: 1.75em;
-    margin: $buffer 0;
+    margin: $buffer-3 0;
+  }
+
+  &__title {
+    border-bottom: 1px solid $color-primary-light;
+    border-top: 1px solid $color-primary-light;
+    color: $color-primary-dark;
+    font-family: $font-stack-sans;
+    font-size: $font-size-m;
+    line-height: $line-height-s;
+    margin: $buffer-3 0;
+    padding: $buffer-1 0;
+  }
+
+  &__subtitle {
+    color: $color-accent;
+    font-family: $font-stack-sans;
+    font-size: $font-size-s;
+    font-weight: $font-weight-sb;
+    letter-spacing: 1px;
+    line-height: $line-height-s;
+    margin: $buffer-2 0;
+    text-transform: uppercase;
+
+    & + .section__paragraph {
+      margin-top: 0;
+    }
+  }
+
+  &__paragraph {
+    margin: $buffer-3 0;
+
+    & + .section__subtitle {
+      margin-top: $buffer-5;
+    }
   }
 }

@@ -1,12 +1,38 @@
 {% extends "/views/base.html" %}
 
 {% block page_content %}
-  <section class="section">
-    <h2 class="section__headline">
-      Hello, my name is Michael. I am Designer and Front End Developer living in the Bay Area.
-    </h2>
-  </section>
-  <section class="section">
-    <img src="{{g.static('/src/img/me-skydiving.jpg').url.path}}"
-  </section>
+  {% for section in doc.sections %}
+    <section class="section">
+      {% if section.headline %}
+        <h2 class="section__headline">
+          {{ macros.drop_cap(section.headline) }}
+        </h2>
+      {% endif %}
+
+      {% if section.img %}
+        <img src="{{g.static('/src/img/{}'.format(section.img.src)).url.path}}"
+            alt="{{section.img.alt}}"
+            border=0>
+      {% endif %}
+
+      {% if section.title %}
+        <h3 class="section__title">
+          {{ section.title }}
+        </h3>
+      {% endif %}
+
+      {% if section.paragraphs %}
+        {% for p in section.paragraphs %}
+          {% if p.subtitle %}
+            <h4 class="section__subtitle">
+              {{ p.subtitle }}
+            </h4>
+          {% endif %}
+          <p class="section__paragraph">
+            {{ p.text|safe }}
+          </p>
+        {% endfor %}
+      {% endif %}
+    </section>
+  {% endfor %}
 {% endblock %}

@@ -5,7 +5,7 @@
   display: flex;
   height: $header-height;
   justify-content: space-between;
-  padding-left: $buffer;
+  padding-left: $buffer-3;
 
   &__menu {
     height: 100%;
@@ -13,6 +13,6 @@
 
   &__button {
     height: 100%;
-    padding: 0 $buffer;
+    padding: 0 $buffer-3;
   }
 }

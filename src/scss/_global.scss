@@ -20,6 +20,17 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -36,5 +47,32 @@ button {
 }
 
 .main {
-  padding: 0 $buffer;
+  flex: 1;
+  padding: 0 $buffer-3;
+}
+
+.main,
+.footer {
+  a {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      background: $color-accent;
+      bottom: 0;
+      content: '';
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      transition: all .15s ease-out;
+      width: 0
+    }
+
+    &:hover {
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
 }

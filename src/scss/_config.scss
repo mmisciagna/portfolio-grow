@@ -6,20 +6,30 @@ $color-accent: #f4511e;
 $color-white: #fff;
 
 // Font.
-$font-size-headline: 28px;
+$font-stack-serif: 'Source Serif Pro', Georgia, serif;
+$font-stack-sans: 'Source Sans Pro', Arial, sans-serif;
+
+$font-size-l: 28px;
+$font-size-m: 18px;
 $font-size: 16px;
+$font-size-s: 14px;
 
 $font-weight-sb: 600;
 $font-weight-r: 400;
+$font-weight-l: 100;
 
 $line-height: 1.75;
+$line-height-s: 1.25;
 
-$font: #{$font-weight-r} #{$font-size}/#{$line-height} 'Source Serif Pro', serif;
+$font: #{$font-weight-r} #{$font-size}/#{$line-height} #{$font-stack-serif};
 
 // Buffers and dimensions.
-$buffer: 24px;
-$buffer-half: $buffer / 2;
-$buffer-2: $buffer * 2;
+$buffer-base: 8px;
+$buffer-1: $buffer-base;
+$buffer-2: $buffer-base * 2;
+$buffer-3: $buffer-base * 3;
+$buffer-5: $buffer-base * 5;
+$buffer-6: $buffer-base * 6;
 
 $header-height: 50px;
 $max-width: 1200px;
