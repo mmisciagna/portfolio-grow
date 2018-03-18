@@ -1,0 +1,11 @@
+.section {
+  margin: $buffer-2 auto;
+  max-width: $max-width;
+
+  &__headline {
+    font-size: $font-size-headline;
+    font-weight: $font-weight-sb;
+    line-height: 1.75em;
+    margin: $buffer 0;
+  }
+}

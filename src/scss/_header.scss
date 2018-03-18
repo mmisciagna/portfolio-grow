@@ -1,0 +1,18 @@
+.header {
+  align-items: center;
+  background: $color-primary-dark;
+  color: $color-white;
+  display: flex;
+  height: $header-height;
+  justify-content: space-between;
+  padding-left: $buffer;
+
+  &__menu {
+    height: 100%;
+  }
+
+  &__button {
+    height: 100%;
+    padding: 0 $buffer;
+  }
+}

@@ -1,85 +1,25 @@
-// Buffers.
-$buffer: 40px;
-$half-buffer: $buffer / 2;
-$quarter-buffer: $buffer / 4;
-
-$max-width: 980px;
-$hero-copy-max-width: 650px;
-$masthead-height: 60px;
-$yt-video-ratio: (9 / 16) * 100%;
-
-$icon-lg: 30px;
-$icon-sm: 15px;
-
-$z-top: 1000;
-$z-md: 100;
-
-// Transitions.
-$ease-out: .3s ease-out;
-$ease-in: .2s ease-in;
-
 // Colors.
-$color-black: #000;
-$color-black-80: rgba(0,0,0,.8);
-$color-black-60: rgba(0,0,0,.6);
-$color-black-25: rgba(0,0,0,.25);
-$color-black-15: rgba(0,0,0,.15);
-
+$color-primary: #607d8b;
+$color-primary-dark: #263238;
+$color-primary-light: #cfd8dc;
+$color-accent: #f4511e;
 $color-white: #fff;
-$color-white-80: rgba(255,255,255,.8);
-$color-white-60: rgba(255,255,255,.6);
 
+// Font.
+$font-size-headline: 28px;
+$font-size: 16px;
 
-//Font.
-$font-color: $color-black-60;
+$font-weight-sb: 600;
+$font-weight-r: 400;
 
-$font-size-xxx-lg: 92px;
-$font-size-xx-lg: 64px;
-$font-size-x-lg: 32px;
-$font-size-lg: 28px;
-$font-size-md: 18px;
-$font-size-sm: 14px;
-$font-size-x-sm: 12px;
+$line-height: 1.75;
 
-$font-weight-reg: 400;
-$font-weight-light: 300;
-$font-weight-x-light: 200;
+$font: #{$font-weight-r} #{$font-size}/#{$line-height} 'Source Serif Pro', serif;
 
-$line-height-x-lg: 2.7em;
-$line-height-lg: 2.5em;
-$line-height-md: 2em;
-$line-height-reg: 1.7em;
-$line-height-sm: 1.5em;
-$line-height-x-sm: 1.125em;
-$line-height-reset: 1;
+// Buffers and dimensions.
+$buffer: 24px;
+$buffer-half: $buffer / 2;
+$buffer-2: $buffer * 2;
 
-$font: 400 14px/2em 'Source Sans Pro', Arial, sans-serif;
-
-// Breakpoints and media queries.
-$breakpoint-tablet: 600px;
-$breakpoint-sm-desktop: 900px;
-$breakpoint-desktop: 1200px;
-
-@mixin tablet-up {
-  @media only screen and (min-width: $breakpoint-tablet) {
-    @content;
-  }
-}
-
-@mixin sm-desktop-up {
-  @media only screen and (min-width: $breakpoint-sm-desktop) {
-    @content;
-  }
-}
-
-@mixin desktop-up {
-  @media only screen and (min-width: $breakpoint-desktop) {
-    @content;
-  }
-}
-
-@mixin hover {
-  .no-touch &:hover {
-    @content;
-  }
-}
+$header-height: 50px;
+$max-width: 1200px;

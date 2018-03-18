@@ -6,9 +6,11 @@ home: /content/pages/home.yaml
 static_dirs:
   - static_dir: /dist/
     serve_at: /
-    fingerprinted: true
   - static_dir: /src/img/
     serve_at: /img/
+
+localization:
+  default_locale: en
 
 preprocessors:
   - kind: gulp

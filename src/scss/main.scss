@@ -1,19 +1,7 @@
-// Global.
+// Base.
 @import 'config';
 @import 'global';
-@import 'block';
+@import 'section';
 
-// Utils.
-@import 'table';
-@import 'columns';
-@import 'yt-video';
-
-// Pages.
-@import 'home';
-
-// Components.
-@import 'masthead';
-@import 'mobile-nav';
-@import 'hero';
-@import 'accordion';
-@import 'modal';
+// Partials.
+@import 'header';

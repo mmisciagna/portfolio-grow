@@ -1,0 +1,11 @@
+{
+  "/content/pages/home.yaml": [
+    "/dist/css/main.min.css",
+    "/dist/js/main.min.js",
+    "/src/img/favicon.png",
+    "/src/img/logo.svg",
+    "/src/img/me-skydiving.jpg",
+    "/src/img/menu-btn.svg",
+    "/views/partials/header.html"
+  ]
+}

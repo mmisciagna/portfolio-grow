@@ -1,67 +1,40 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
-body {
-  color: $font-color;
-  font: $font;
-  margin: 0;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body,
 html {
-  background-color: $color-white;
-  background-image: url(/img/wood-pattern.png);
-  background-blend-mode: luminosity;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  background: url(/img/bg-pattern.jpg);
+  color: $color-primary;
+  font: $font;
+  margin: 0;
+  position: relative;
+  text-rendering: optimizeLegibility;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+img {
+  max-width: 100%;
+  vertical-align: middle;
 }
 
-*:focus {
-  outline: 1px dotted $color-black-25;
+button {
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
 }
 
-::-moz-selection {
-  color: $color-white-80;
-  background: $color-black-80;
-}
-
-::selection {
-  color: $color-white-80;
-  background: $color-black-80;
-}
-
-a {
-  text-decoration: none;
-  color: $color-black-80;
-  border-bottom: 1px solid transparent;
-  transition: border-color $ease-out;
-
-  @include hover {
-    border-color: inherit;
-  }
-}
-
-p {
-  margin: $half-buffer 0;
-}
-
-.main-content {
-  flex: 1;
-  padding-bottom: $masthead-height;
+.main {
+  padding: 0 $buffer;
 }
