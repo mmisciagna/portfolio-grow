@@ -4,7 +4,7 @@ $order: 1
 $title: Home
 
 sections:
-  - headline: Hello, my name is Michael. I am Designer and Front End Developer living in the Bay Area.
+  - headline: Hello, my name is Michael. I am a Front End Developer and Web Designer living in the Bay Area.
 
   - title: About
     img:

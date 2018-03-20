@@ -1,0 +1,15 @@
+<aside class="mobile-nav js-mobile-nav"
+    aria-hidden="true">
+  <div class="mobile-nav__menu">
+    <ul class="mobile-nav__list">
+      {% for page in g.docs('pages') %}
+        <li class="mobile-nav__list-item">
+          <a class="mobile-nav__link {% if page == doc %}mobile-nav__link--active{% endif %}"
+              href="{{page.url.path}}">
+            {{page.title}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>

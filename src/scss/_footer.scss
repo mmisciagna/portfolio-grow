@@ -27,11 +27,18 @@
   }
 
   &__link {
-    color: inherit;
+    @include hover-state($color-primary);
+    color: $color-primary;
     display: inline-block;
 
-    &::after {
-      background: $color-white !important;
+    &--active {
+      color: $color-white;
+
+      &:hover {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 }

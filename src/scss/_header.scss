@@ -5,13 +5,22 @@
   display: flex;
   height: $header-height;
   justify-content: space-between;
+  left: 0;
   padding-left: $buffer-3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &--offset {
+    height: $header-height;
+  }
 
   &__menu {
     height: 100%;
   }
 
   &__button {
+    color: $color-primary;
     height: 100%;
     padding: 0 $buffer-3;
   }

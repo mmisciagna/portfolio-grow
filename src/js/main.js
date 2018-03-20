@@ -1,1 +1,4 @@
-console.log('JS works!');
+const MobileNav = require('./mobile-nav');
+
+
+MobileNav.init();

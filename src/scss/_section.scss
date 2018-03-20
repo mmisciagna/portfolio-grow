@@ -6,10 +6,9 @@
     color: $color-accent;
     display: inline-block;
     float: left;
-    font-size: 100px;
-    line-height: 90px;
-    margin-left: -12px;
-    padding: $buffer-1 2px 0 0;
+    font-size: 80px;
+    line-height: 40px;
+    margin-left: -8px;
   }
 
   &__headline {
@@ -51,6 +50,10 @@
 
     & + .section__subtitle {
       margin-top: $buffer-5;
+    }
+
+    a {
+      @include hover-state($color-accent);
     }
   }
 }

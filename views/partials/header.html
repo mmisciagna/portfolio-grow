@@ -1,3 +1,4 @@
+<div class="header--offset"></div>
 <header class="header">
   <div class="header__logo">
     <h1 style="display: none;">Michael Misciagna</h1>
@@ -8,10 +9,13 @@
     </a>
   </div>
   <div class="header__menu">
-    <button class="header__button">
-      <img src="{{g.static('/src/img/menu-btn.svg').url.path}}"
-          alt="Menu"
-          border="0">
+    <button class="header__button js-menu-btn"
+        aria-label="open mobile nav">
+      <i class="material-icons">menu</i>
+    </button>
+    <button class="header__button js-close-btn hide"
+        aria-label="close mobile nav">
+      <i class="material-icons">close</i>
     </button>
   </div>
 </header>

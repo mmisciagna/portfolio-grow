@@ -5,6 +5,10 @@
     "/content/pages/work.yaml",
     "/dist/css/main.min.css",
     "/dist/js/main.min.js",
+    "/src/img/favicon-144x144.png",
+    "/src/img/favicon-48x48.png",
+    "/src/img/favicon-72x72.png",
+    "/src/img/favicon-96x96.png",
     "/src/img/favicon_144x144.png",
     "/src/img/favicon_48x48.png",
     "/src/img/favicon_72x72.png",
@@ -12,7 +16,8 @@
     "/src/img/logo.svg",
     "/src/img/menu-btn.svg",
     "/views/partials/footer.html",
-    "/views/partials/header.html"
+    "/views/partials/header.html",
+    "/views/partials/mobile-nav.html"
   ],
   "/content/pages/home.yaml": [
     "/content/pages/contact.yaml",
@@ -20,6 +25,10 @@
     "/content/pages/work.yaml",
     "/dist/css/main.min.css",
     "/dist/js/main.min.js",
+    "/src/img/favicon-144x144.png",
+    "/src/img/favicon-48x48.png",
+    "/src/img/favicon-72x72.png",
+    "/src/img/favicon-96x96.png",
     "/src/img/favicon_144x144.png",
     "/src/img/favicon_48x48.png",
     "/src/img/favicon_72x72.png",
@@ -28,7 +37,8 @@
     "/src/img/me-skydiving.jpg",
     "/src/img/menu-btn.svg",
     "/views/partials/footer.html",
-    "/views/partials/header.html"
+    "/views/partials/header.html",
+    "/views/partials/mobile-nav.html"
   ],
   "/content/pages/work.yaml": [
     "/content/pages/contact.yaml",
@@ -36,6 +46,10 @@
     "/content/pages/work.yaml",
     "/dist/css/main.min.css",
     "/dist/js/main.min.js",
+    "/src/img/favicon-144x144.png",
+    "/src/img/favicon-48x48.png",
+    "/src/img/favicon-72x72.png",
+    "/src/img/favicon-96x96.png",
     "/src/img/favicon_144x144.png",
     "/src/img/favicon_48x48.png",
     "/src/img/favicon_72x72.png",
@@ -43,6 +57,7 @@
     "/src/img/logo.svg",
     "/src/img/menu-btn.svg",
     "/views/partials/footer.html",
-    "/views/partials/header.html"
+    "/views/partials/header.html",
+    "/views/partials/mobile-nav.html"
   ]
 }

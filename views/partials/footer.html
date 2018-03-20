@@ -2,7 +2,7 @@
   <ul class="footer__list">
     {% for page in g.docs('pages') %}
       <li class="footer__list-item">
-        <a class="footer__link"
+        <a class="footer__link {% if page == doc %}footer__link--active{% endif %}"
             href="{{page.url.path}}">
           {{page.title}}
         </a>
