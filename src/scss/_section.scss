@@ -1,6 +1,5 @@
 .section {
-  margin: $buffer-6 auto;
-  max-width: $max-width;
+  @include content-max-width($buffer-6, $breakpoint-ipad-landscape);
 
   &__drop-cap {
     color: $color-accent;
@@ -12,32 +11,31 @@
   }
 
   &__headline {
+    @include content-max-width($buffer-3, $content-max-width);
     color: $color-primary-dark;
     font-size: $font-size-l;
     font-weight: $font-weight-sb;
-    line-height: 1.75em;
-    margin: $buffer-3 0;
+    line-height: $line-height;
   }
 
   &__title {
+    @include content-max-width($buffer-3, $content-max-width);
     border-bottom: 1px solid $color-primary-light;
-    border-top: 1px solid $color-primary-light;
     color: $color-primary-dark;
     font-family: $font-stack-sans;
     font-size: $font-size-m;
     line-height: $line-height-xs;
-    margin: $buffer-3 0;
-    padding: $buffer-1 0;
+    padding: 0 0 $buffer-1;
   }
 
   &__subtitle {
+    @include content-max-width($buffer-2, $content-max-width);
     color: $color-accent;
     font-family: $font-stack-sans;
     font-size: $font-size-s;
     font-weight: $font-weight-sb;
     letter-spacing: 1px;
     line-height: $line-height-xs;
-    margin: $buffer-2 0;
     text-transform: uppercase;
 
     & + .section__paragraph {
@@ -46,7 +44,7 @@
   }
 
   &__paragraph {
-    margin: $buffer-3 0;
+    @include content-max-width($buffer-3, $content-max-width);
 
     & + .section__subtitle {
       margin-top: $buffer-5;
@@ -77,5 +75,6 @@
     font-style: italic;
     line-height: $line-height-s;
     margin: $buffer-1 0 0;
+    text-align: right;
   }
 }

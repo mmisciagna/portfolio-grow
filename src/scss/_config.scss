@@ -35,7 +35,8 @@ $buffer-5: $buffer-base * 5;
 $buffer-6: $buffer-base * 6;
 
 $header-height: 50px;
-$max-width: 1200px;
+$max-width: 1024px;
+$content-max-width: 700px;
 $aspect-ratio: (9 / 16) * 100%;
 
 // Breakpoints and media queries.
@@ -98,4 +99,9 @@ $breakpoint-ipad-landscape: 1024px;
     left: 0;
     width: 100%;
   }
+}
+
+@mixin content-max-width($margin, $width) {
+  margin: $margin auto;
+  max-width: $width;
 }
