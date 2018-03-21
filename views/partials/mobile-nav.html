@@ -4,7 +4,7 @@
     <ul class="mobile-nav__list">
       {% for page in g.docs('pages') %}
         <li class="mobile-nav__list-item">
-          <a class="mobile-nav__link {% if page == doc %}mobile-nav__link--active{% endif %}"
+          <a class="mobile-nav__link mobile-nav__link--{{ loop.index }} {% if page == doc %}mobile-nav__link--active{% endif %}"
               href="{{page.url.path}}">
             {{page.title}}
           </a>

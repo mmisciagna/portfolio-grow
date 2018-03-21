@@ -16,6 +16,11 @@
   &--opened {
     opacity: 1;
     pointer-events: auto;
+
+    .mobile-nav__link {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__menu {
@@ -43,10 +48,19 @@
     font-size: $font-size-xl;
     font-weight: $font-weight-l;
     line-height: 1;
+    opacity: 0;
     padding: $buffer-2 $buffer-3;
     text-align: center;
-    transition: color .3s ease-out;
+    transition: color .3s ease-out,
+                opacity .6s ease-out,
+                transform .6s ease-out;
     white-space: nowrap;
+
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        transform: translateY(-$buffer-3 * $i);
+      }
+    }
 
     &--active {
       background: $color-primary;
