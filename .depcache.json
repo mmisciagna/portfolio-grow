@@ -17,7 +17,8 @@
     "/src/img/menu-btn.svg",
     "/views/partials/footer.html",
     "/views/partials/header.html",
-    "/views/partials/mobile-nav.html"
+    "/views/partials/mobile-nav.html",
+    "/views/partials/nav.html"
   ],
   "/content/pages/home.yaml": [
     "/content/pages/contact.yaml",
@@ -36,9 +37,11 @@
     "/src/img/logo.svg",
     "/src/img/me-skydiving.jpg",
     "/src/img/menu-btn.svg",
+    "/src/img/michael-amalfi-coast.jpg",
     "/views/partials/footer.html",
     "/views/partials/header.html",
-    "/views/partials/mobile-nav.html"
+    "/views/partials/mobile-nav.html",
+    "/views/partials/nav.html"
   ],
   "/content/pages/work.yaml": [
     "/content/pages/contact.yaml",
@@ -58,6 +61,7 @@
     "/src/img/menu-btn.svg",
     "/views/partials/footer.html",
     "/views/partials/header.html",
-    "/views/partials/mobile-nav.html"
+    "/views/partials/mobile-nav.html",
+    "/views/partials/nav.html"
   ]
 }

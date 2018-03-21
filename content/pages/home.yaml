@@ -6,13 +6,18 @@ $title: Home
 sections:
   - headline: Hello, my name is Michael. I am a Front End Developer and Web Designer living in the Bay Area.
 
+  - title: Status
+    paragraphs:
+      - text: At home in Mountain View, CA currently accepting freelance projects.
+
   - title: About
     img:
-      src: me-skydiving.jpg
-      alt: Michael skydiving
+      src: michael-amalfi-coast.jpg
+      alt: Michael on a boat in the Amalfi Coast
+      caption: Here we see Michael on a boat in the Amalfi Coast.
     paragraphs:
       - text: My day job is web developing and designing YouTube marketing sites for Google. In the evening, I enjoy spending time at home catching up on my favorite shows, blogs and news. During this time I also like to inspect elements on interesting sites. But most of all, I love spending good ol' fashioned quality time with my wife and kid.
-      - text: I am currently accepting freelance projects.
+      - text: Oh! And travelling abroad!
 
   - title: Services
     paragraphs:

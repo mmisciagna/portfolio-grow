@@ -10,6 +10,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 
   &--offset {
     height: $header-height;
@@ -23,5 +24,14 @@
     color: $color-primary;
     height: 100%;
     padding: 0 $buffer-3;
+    transition: color .3s ease-out;
+
+    @include ipad-portrait-up {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
   }
 }

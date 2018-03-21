@@ -20,6 +20,9 @@ const Aria_ = {
   HIDDEN: 'aria-hidden',
 };
 
+/** @private @const {number} */
+const MAX_WIDTH_ = 768;
+
 
 /**
  * Toggles the mobile nav.
@@ -74,11 +77,20 @@ class MobileNav {
   }
 
   /** private */
+  handleWindowResize_() {
+    if (window.innerWidth >= MAX_WIDTH_ && this.isRootVisible_()) {
+      this.toggleNav_();
+    }
+  }
+
+  /** private */
   registerEvents_() {
     utils.delegate(document, Selectors_.OPEN_BTN, 'click',
         this.toggleNav_.bind(this));
     utils.delegate(document, Selectors_.CLOSE_BTN, 'click',
         this.toggleNav_.bind(this));
+
+    window.addEventListener('resize', this.handleWindowResize_.bind(this));
   }
 }
 

@@ -5,6 +5,12 @@
   padding: $buffer-3;
   text-align: center;
 
+  @include ipad-portrait-up {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__list {
     align-items: center;
     display: flex;
@@ -12,6 +18,10 @@
     list-style: none;
     margin: 0 0 $buffer-2;
     padding: 0;
+
+    @include ipad-portrait-up {
+      margin: 0;
+    }
   }
 
   &__list-item {

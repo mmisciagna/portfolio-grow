@@ -25,7 +25,7 @@
     color: $color-primary-dark;
     font-family: $font-stack-sans;
     font-size: $font-size-m;
-    line-height: $line-height-s;
+    line-height: $line-height-xs;
     margin: $buffer-3 0;
     padding: $buffer-1 0;
   }
@@ -36,7 +36,7 @@
     font-size: $font-size-s;
     font-weight: $font-weight-sb;
     letter-spacing: 1px;
-    line-height: $line-height-s;
+    line-height: $line-height-xs;
     margin: $buffer-2 0;
     text-transform: uppercase;
 
@@ -55,5 +55,27 @@
     a {
       @include hover-state($color-accent);
     }
+  }
+
+  &__figure {
+    margin: 0;
+    width: 100%;
+  }
+
+  &__figure-aspect-ratio {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    padding-bottom: $aspect-ratio;
+    position: relative;
+    width: 100%;
+  }
+
+  &__figure-caption {
+    font-size: $font-size-xs;
+    font-style: italic;
+    line-height: $line-height-s;
+    margin: $buffer-1 0 0;
   }
 }

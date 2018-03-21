@@ -9,16 +9,24 @@
         </h2>
       {% endif %}
 
-      {% if section.img %}
-        <img src="{{g.static('/src/img/{}'.format(section.img.src)).url.path}}"
-            alt="{{section.img.alt}}"
-            border=0>
-      {% endif %}
-
       {% if section.title %}
         <h3 class="section__title">
           {{ section.title }}
         </h3>
+      {% endif %}
+
+      {% if section.img %}
+        <figure class="section__figure">
+          <div class="section__figure-aspect-ratio"
+              style="background-image: url({{ g.static('/src/img/{}'.format(section.img.src)).url.path }})"
+              aria-label="{{ section.img.alt }}">
+          </div>
+          {% if section.img.caption %}
+            <figcaption class="section__figure-caption">
+              {{ section.img.caption }}
+            </figcaption>
+          {% endif %}
+        </figure>
       {% endif %}
 
       {% if section.paragraphs %}

@@ -13,6 +13,10 @@
   width: 100%;
   z-index: 1;
 
+  @include ipad-portrait-up {
+    display: none;
+  }
+
   &--opened {
     opacity: 1;
     pointer-events: auto;

@@ -1,0 +1,17 @@
+<nav class="nav"
+    aria-label="Navigation">
+  <ul class="nav__list"
+      role="menubar"
+      aria-label="Navigation menubar">
+    {% for page in g.docs('pages') %}
+      <li class="nav__list-item"
+          role="none">
+        <a class="nav__link {% if page == doc %}nav__link--active{% endif %}"
+            href="{{page.url.path}}"
+            role="menuitem">
+          {{page.title}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

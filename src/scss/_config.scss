@@ -14,13 +14,15 @@ $font-size-l: 28px;
 $font-size-m: 18px;
 $font-size: 16px;
 $font-size-s: 14px;
+$font-size-xs: 12px;
 
 $font-weight-sb: 600;
 $font-weight-r: 400;
 $font-weight-l: 100;
 
 $line-height: 1.75;
-$line-height-s: 1.25;
+$line-height-s: 1.5em;
+$line-height-xs: 1.25;
 
 $font: #{$font-weight-r} #{$font-size}/#{$line-height} #{$font-stack-serif};
 
@@ -34,6 +36,37 @@ $buffer-6: $buffer-base * 6;
 
 $header-height: 50px;
 $max-width: 1200px;
+$aspect-ratio: (9 / 16) * 100%;
+
+// Breakpoints and media queries.
+$breakpoint-tablet: 600px;
+$breakpoint-ipad-portrait: 768px;
+$breakpoint-tablet-landscape: 900px;
+$breakpoint-ipad-landscape: 1024px;
+
+@mixin tablet-up {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin ipad-portrait-up {
+  @media only screen and (min-width: $breakpoint-ipad-portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-up {
+  @media only screen and (min-width: $breakpoint-tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape-up {
+  @media only screen and (min-width: $breakpoint-ipad-landscape) {
+    @content;
+  }
+}
 
 // Mixins.
 @mixin hover-state($border_color) {
