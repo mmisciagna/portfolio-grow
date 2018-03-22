@@ -1,14 +1,19 @@
 .footer {
   background: $color-primary-dark;
   color: $color-white;
+  font-family: $font-stack-sans;
   font-size: $font-size-s;
   padding: $buffer-3;
   text-align: center;
 
-  @include ipad-portrait-up {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+  &__inner {
+    @include content-max-width(0, $breakpoint-ipad-landscape);
+
+    @include ipad-portrait-up {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__list {

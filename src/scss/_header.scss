@@ -1,10 +1,7 @@
 .header {
-  align-items: center;
   background: $color-primary-dark;
   color: $color-white;
-  display: flex;
   height: $header-height;
-  justify-content: space-between;
   left: 0;
   padding-left: $buffer-3;
   position: fixed;
@@ -12,8 +9,20 @@
   width: 100%;
   z-index: 1;
 
+  @include ipad-portrait-up {
+    padding-right: $buffer-3;
+  }
+
   &--offset {
     height: $header-height;
+  }
+
+  &__inner {
+    @include content-max-width(0, $breakpoint-ipad-landscape);
+    align-items: center;
+    display: flex;
+    height: $header-height;
+    justify-content: space-between;
   }
 
   &__menu {

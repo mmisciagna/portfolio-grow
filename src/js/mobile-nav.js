@@ -52,13 +52,6 @@ class MobileNav {
   };
 
   /** private */
-  toggleNav_() {
-    this.toggleVisibilty_();
-    this.toggleBtns_();
-    this.toggleAria_();
-  }
-
-  /** private */
   toggleVisibilty_() {
     this.root_.classList.toggle(ClassNames_.OPENED, !this.isRootVisible_());
     document.body.classList.toggle(ClassNames_.NO_SCROLL,
@@ -77,22 +70,29 @@ class MobileNav {
   }
 
   /** private */
-  handleWindowResize_() {
+  handleToggle_() {
+    this.toggleVisibilty_();
+    this.toggleBtns_();
+    this.toggleAria_();
+  }
+
+  /** private */
+  handleResize_() {
     if (window.innerWidth >= MAX_WIDTH_ && this.isRootVisible_()) {
-      this.toggleNav_();
+      this.handleToggle_();
     }
   }
 
   /** private */
   registerEvents_() {
     utils.delegate(document, Selectors_.OPEN_BTN, 'click',
-        this.toggleNav_.bind(this));
+        this.handleToggle_.bind(this));
     utils.delegate(document, Selectors_.CLOSE_BTN, 'click',
-        this.toggleNav_.bind(this));
+        this.handleToggle_.bind(this));
 
-    window.addEventListener('resize', this.handleWindowResize_.bind(this));
+    window.addEventListener('resize', this.handleResize_.bind(this));
   }
 }
 
 
-module.exports.init = () =>  new MobileNav;
+module.exports.init = () => new MobileNav;

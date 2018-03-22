@@ -1,15 +1,20 @@
 <footer class="footer">
-  <ul class="footer__list">
-    {% for page in g.docs('pages') %}
-      <li class="footer__list-item">
-        <a class="footer__link {% if page == doc %}footer__link--active{% endif %}"
-            href="{{page.url.path}}">
-          {{page.title}}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-  <div class="footer__copyright">
-    © 2018 Michael Misciagna
+  <div class="footer__inner">
+    <ul class="footer__list"
+        role="menubar">
+      {% for page in g.docs('pages') %}
+        <li class="footer__list-item"
+            role="none">
+          <a class="footer__link {% if page == doc %}footer__link--active{% endif %}"
+              href="{{page.url.path}}"
+              role="menuitem">
+            {{page.title}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="footer__copyright">
+      © 2018 Michael Misciagna
+    </div>
   </div>
 </footer>
