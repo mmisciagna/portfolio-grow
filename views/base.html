@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Michael Misciagna" name="author">
-    <meta name="description" content="Hello, my name is Michael. I am a Front End Developer and Web Designer living in the San Francisco Bay Area.">
-    <title>{{doc.title}} | {{podspec.title}}</title>
+    <meta name="description" content="{{ podspec.description }}">
+    <title>{{ doc.title }} | {{ podspec.title }}</title>
     <link href="{{g.static('/src/img/favicon-48x48.png').url.path}}" rel="icon" sizes="48x48">
     <link href="{{g.static('/src/img/favicon-72x72.png').url.path}}" rel="icon" sizes="72x72">
     <link href="{{g.static('/src/img/favicon-96x96.png').url.path}}" rel="icon" sizes="96x96">
@@ -16,13 +16,26 @@
     <link href="{{g.static('/dist/css/main.min.css').url.path}}" rel="stylesheet">
   </head>
   <body>
-    {% import '/views/macros.html' as macros %}
-    {% include "/views/partials/header.html" %}
-    {% include "/views/partials/mobile-nav.html" %}
+    {% import '/partials/macros.html' as macros %}
+    {% include "/partials/header.html" %}
+    {% include "/partials/mobile-nav.html" %}
     <main class="main">
-      {% block page_content %}{% endblock %}
+      {% if doc.partials %}
+        {% for field in doc.partials %}
+          {% if not field.partial %}
+            {% continue %}
+          {% endif %}
+
+          {% set partial_filename = field.partial|expand_partial %}
+          {% with partial = field %}
+            {% include partial_filename ignore missing with context %}
+          {% endwith %}
+        {% endfor %}
+      {% else %}
+        {% block page_content %}{% endblock %}
+      {% endif %}
     </main>
-    {% include "/views/partials/footer.html" %}
+    {% include "/partials/footer.html" %}
     <script src="{{g.static('/dist/js/main.min.js').url.path}}"></script>
   </body>
 </html>

@@ -5,9 +5,12 @@
     color: $color-accent;
     display: inline-block;
     float: left;
-    font-size: 80px;
-    line-height: 40px;
+    font-size: 86px;
+    line-height: 72px;
     margin-left: -8px;
+    margin-right: 4px;
+    position: relative;
+    top: 5px;
   }
 
   &__headline {
@@ -15,7 +18,7 @@
     color: $color-primary-dark;
     font-size: $font-size-l;
     font-weight: $font-weight-sb;
-    line-height: $line-height;
+    line-height: $line-height-s;
   }
 
   &__title {

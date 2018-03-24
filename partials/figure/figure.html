@@ -1,0 +1,11 @@
+<figure class="section__figure"
+    aria-label="{{ partial.figure.alt }}">
+  <div class="section__figure-aspect-ratio"
+      style="background-image: url({{ g.static('/src/img/{}'.format(partial.figure.image)).url.path }})">
+  </div>
+  {% if partial.figure.caption %}
+    <figcaption class="section__figure-caption">
+      {{ partial.figure.caption }}
+    </figcaption>
+  {% endif %}
+</figure>

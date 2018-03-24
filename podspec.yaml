@@ -1,6 +1,7 @@
 grow_version: ">=0.0.68"
 
-title: "Michael M."
+title: Michael M.
+description: Hello, my name is Michael. I am a Front End Developer and Web Designer living in the San Francisco Bay Area.
 home: /content/pages/home.yaml
 
 static_dirs:
